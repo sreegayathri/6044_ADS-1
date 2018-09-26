@@ -3,11 +3,11 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-class Solution {
+public final class Solution {
 	/**
 	 * Constructs the object.
 	 */
-	Solution() {
+	private Solution() {
 
 	}
 	/**
