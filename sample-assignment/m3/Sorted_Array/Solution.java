@@ -61,6 +61,6 @@ public final class Solution {
 	    		j++;
 	    	// }
 	    }
-	    System.out.println(Arrays.toString(finalarray).replaceAll("[//]//[ ]",""));
+	    System.out.println(Arrays.toString(finalarray).replaceAll("[\\]\\[ ]",""));
 	}
 }
