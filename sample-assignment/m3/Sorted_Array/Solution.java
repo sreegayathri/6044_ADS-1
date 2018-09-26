@@ -22,7 +22,6 @@ public final class Solution {
         int[] twoArray = new int[sizetwo];
         String[] arr1 = scan.nextLine().split(",");
         String[] arr2 = scan.nextLine().split(",");
-        scan.nextLine();
         for (int i = 0; i < firstArray.length; i++) {
 		//System.out.println(" number");
             firstArray[i] = Integer.parseInt(arr1[i]);
