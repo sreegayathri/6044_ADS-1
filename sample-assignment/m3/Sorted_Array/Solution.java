@@ -41,22 +41,23 @@ public final class Solution {
         int index = 0;
         while(i < firstArray.length && j < twoArray.length) {
 	        if (firstArray[i] < twoArray[j]) {
-	        	finalarray[index] = firstArray[i];
+	        	finalarray[index++] = firstArray[i];
 	        	i++;
 	        } else {
-	        	finalarray[index] = twoArray[j];
+	        	finalarray[index++] = twoArray[j];
 	        	j++;
 	        }
+
         }
         while(i < firstArray.length) {
 	        // if (fibrstArray[i] < twoArray[j]) {
-	        	finalarray[index] = firstArray[i];
+	        	finalarray[index++] = firstArray[i];
 	        	i++;
 	        // } 
         }
 	    while (j < twoArray.length) {
 	    	// if (firstArray[i] > twoArray[j]) {
-	    		finalarray[index] = twoArray[j];
+	    		finalarray[index++] = twoArray[j];
 	    		j++;
 	    	// }
 	    }
