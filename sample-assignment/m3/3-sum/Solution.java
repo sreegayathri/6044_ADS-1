@@ -1,7 +1,19 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for solution.
+ */
 class Solution {
-	Solution() {}
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
+
+	}
+	/**
+	 * { function_description }
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 // Solution nop = new Solution();
 		Scanner scan = new Scanner(System.in);
