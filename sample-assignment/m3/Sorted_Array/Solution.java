@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 /**.
  * { item_description }.
  */
@@ -20,8 +20,11 @@ public final class Solution {
         int sizetwo = scan.nextInt();
         int[] firstArray = new int[sizefirst];
         int[] twoArray = new int[sizetwo];
+        scan.nextLine();
         String[] arr1 = scan.nextLine().split(",");
         String[] arr2 = scan.nextLine().split(",");
+        /*System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));*/
         for (int i = 0; i < firstArray.length; i++) {
 		//System.out.println(" number");
             firstArray[i] = Integer.parseInt(arr1[i]);
@@ -46,16 +49,17 @@ public final class Solution {
 	        }
         }
         while(i < firstArray.length) {
-	        if (firstArray[i] < twoArray[j]) {
+	        // if (fibrstArray[i] < twoArray[j]) {
 	        	finalarray[index] = firstArray[i];
 	        	i++;
-	        } 
+	        // } 
         }
 	    while (j < twoArray.length) {
-	    	if (firstArray[i] > twoArray[j]) {
+	    	// if (firstArray[i] > twoArray[j]) {
 	    		finalarray[index] = twoArray[j];
 	    		j++;
-	    	}
+	    	// }
 	    }
+	    System.out.println(Arrays.toString(finalarray));
 	}
 }
