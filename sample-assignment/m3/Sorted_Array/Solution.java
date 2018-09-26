@@ -2,7 +2,7 @@ import java.util.*;
 /**.
  * { item_description }.
  */
-public final class Solution {
+class Solution {
     /**.
      * Constructs the object.
      */
