@@ -4,11 +4,11 @@ import java.util.Arrays;
 /**.
  * { item_description }.
  */
-class Solution {
+public final class Solution {
     /**.
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**.
