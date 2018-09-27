@@ -1,0 +1,30 @@
+The given output here is,
+
+==> Input is = it was - the best - of times - - - it was - the - -
+
+##(when "-" is your next element remember to use pop method)##
+
+::Program flow::
+
+step 1: it
+step 2: it was
+step 3: it was -
+step 4: it the // was POP'ed out
+step 5: it the best 
+step 6: it the best - 
+step 7: it the // best is POP'ed out
+step 8: it the of
+step 9: it the of times
+step 10: it the of times -
+step 12: it the of - // times is POP'ed out
+step 13: it the - //of is POP'ed out
+step 14: it it //the is POP'ed out
+step 15: it it was
+step 16: it it was -
+step 17: it it // was is POP'ed out
+step 18: it it the
+step 19: it it the -
+step 20: it it - // the is POP'ed out 
+step 21: it // it POP'ed out
+
+Output is ::--> it
