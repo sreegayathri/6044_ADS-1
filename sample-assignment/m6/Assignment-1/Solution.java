@@ -1,19 +1,19 @@
-/*import java.util.Scanner;
-import java.util.StringBuilder;*/
-import java.util.*;
-/**
+import java.util.Scanner;
+import java.lang.StringBuilder;
+//import java.util.*;
+/**..
 * Class for node.
 */
 class Node {
-    /**
-    * { var_description }
+    /**..
+    * { var_description }.
     */
     private int data;
-    /**
-    * { var_description }
+    /**..
+    * { var_description }.
     */
     private Node link;
-    /**
+    /**..
     * Constructs the object.
     *
     * @param      data  The data
@@ -22,15 +22,15 @@ class Node {
         this.data = data;
         this.link = null;
     }
-    /**
-    * Sets the data.
+    /**..
+    * Set.s the data.
     *
     * @param      data  The data
     */
     public void setData(int data) {
         this.data = data;
     }
-    /**
+    /**..
     * Gets the data.
     *
     * @return     The data.
@@ -38,7 +38,7 @@ class Node {
     public int getData() {
         return this.data;
     }
-    /**
+    /**..
     * Gets the link.
     *
     * @return     The link.
@@ -46,7 +46,7 @@ class Node {
     public Node getLink() {
         return this.link;
     }
-    /**
+    /**.
     * Sets the link.
     *
     * @param      link  The link
@@ -55,26 +55,26 @@ class Node {
         this.link = link;
     }
 }
-/**
+/**.
 * List of linkeds.
 */
 class LinkedList {
-    /**
+    /**.
     * { var_description }
     */
     private int size;
-    /**
+    /**.
     * { var_description }
     */
     private Node start;
-    /**
+    /**.
     * Constructs the object.
     */
     LinkedList() {
         this.size = 0;
         this.start = null;
     }
-    /**
+    /**.
     * { function_description }
     *
     * @return     { description_of_the_return_value }
@@ -82,7 +82,7 @@ class LinkedList {
     public int size() {
         return size;
     }
-    /**
+    /**.
     * Pushes a left.
     *
     * @param      node  The node
@@ -93,7 +93,7 @@ class LinkedList {
         start = newnode;
         size++;
     }
-    /**
+    /**.
     * Removes a left.
     */
     public void removeLeft() {
@@ -102,7 +102,7 @@ class LinkedList {
             size--;
         }
     }
-    /**
+    /**.
     * Returns a string representation of the object.
     *
     * @return     String representation of the object.
@@ -117,11 +117,11 @@ class LinkedList {
         return s;
     }
 }
-/**
+/**.
 * Class for add large numbers.
 */
 class AddLargeNumbers {
-    /**
+    /**.
     * { function_description }
     *
     * @param      number  The number
@@ -136,7 +136,7 @@ class AddLargeNumbers {
         }
         return ll;
     }
-    /**
+    /**.
     * { function_description }
     *
     * @param      list  The list
@@ -153,7 +153,7 @@ class AddLargeNumbers {
         str = "" + sb.reverse();
         return str;
     }
-    /**
+    /**.
     * Adds large numbers.
     *
     * @param      list1  The list 1
@@ -163,22 +163,22 @@ class AddLargeNumbers {
     */
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
         LinkedList lls = new LinkedList();
-
-
+        /*Node link1 = start;
+        Node link2 = start;*/
         return lls;
     }
 }
-/**
+/**.
 * Class for solution.
 */
 public class Solution {
-    /**
+    /**.
     * Constructs the object.
     */
     Solution() {
 
     }
-    /**
+    /**.
     * { function_description }
     *
     * @param      args  The arguments
