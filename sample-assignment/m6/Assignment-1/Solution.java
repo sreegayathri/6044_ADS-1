@@ -18,7 +18,7 @@ class Node {
     *
     * @param      data  The data
     */
-    Node (int data) {
+    Node (final int data){
         this.data = data;
         this.link = null;
     }
@@ -27,7 +27,7 @@ class Node {
     *
     * @param      data  The data
     */
-    public void setData(int data) {
+    public void setData(final int data) {
         this.data = data;
     }
     /**..
@@ -51,7 +51,7 @@ class Node {
     *
     * @param      link  The link
     */
-    public void setLink(Node link) {
+    public void setLink(final Node link) {
         this.link = link;
     }
 }
@@ -87,7 +87,7 @@ class LinkedList {
     *
     * @param      node  The node
     */
-    public void pushLeft(int node) {
+    public void pushLeft(final int node) {
         Node newnode =  new Node(node);
         newnode.setLink(start);
         start = newnode;
@@ -128,7 +128,7 @@ class AddLargeNumbers {
     *
     * @return     { description_of_the_return_value }
     */
-    public static LinkedList numberToDigits(String number) {
+    public static LinkedList numberToDigits(final String number) {
         LinkedList ll = new LinkedList();
         String[] list = number.split("");
         for (int i = 0; i < list.length; i++) {
@@ -143,7 +143,7 @@ class AddLargeNumbers {
     *
     * @return     { description_of_the_return_value }
     */
-    public static String digitsToNumber(LinkedList list) {
+    public static String digitsToNumber(final LinkedList list) {
         String str = "";
 //return str;
         str = list.toString();
@@ -161,7 +161,7 @@ class AddLargeNumbers {
     *
     * @return     { description_of_the_return_value }
     */
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
         LinkedList lls = new LinkedList();
         /*Node link1 = start;
         Node link2 = start;*/
