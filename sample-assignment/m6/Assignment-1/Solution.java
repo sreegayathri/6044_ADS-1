@@ -111,7 +111,7 @@ class LinkedList {
         String s = "";
         Node temp = start;
         while (temp.getLink() != null) {
-            s += temp.getData() + ", ";
+            s += temp.getData() + "";
             temp = temp.getLink();
         } s += temp.getData();
         return s;
