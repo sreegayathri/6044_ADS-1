@@ -28,7 +28,7 @@ public final class Solution {
         Arrays.sort(threeSum); //nlogn
         for (int i = 0; i < n - 2; i++) {
             l = i + 1;
-            r = n - 1; // index of the last element.
+            r = n - 1; // index of the last element in here.
             while (l < r) {
                 if (threeSum[i] + threeSum[l] + threeSum[r] == 0) {
                     count++;
