@@ -15,13 +15,13 @@ public final class Solution {
      * @param      args  The arguments.
      */
     public static void main(final String[] args) {
-// Solution nop = new Solution();
+    // Solution nop = new Solution();
         Scanner scan = new Scanner(System.in);
         /*      int line = scan.nextLine();*/
         int n = scan.nextInt();
         int[] threeSum = new int[n];
         for (int i = 0; i < threeSum.length; i++) {
-//System.out.println(" number");
+        //System.out.println(" number");
             threeSum[i] = scan.nextInt();
         } // n
         int l, r, count = 0;
