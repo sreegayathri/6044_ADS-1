@@ -1,5 +1,5 @@
 /**.
- * { item_description }
+ * Scanner import
  */
 import java.util.Scanner;
 /**.
