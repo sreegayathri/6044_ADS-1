@@ -46,17 +46,19 @@ public final class Solution  {
             break;
         case "Float" :
             while (n > 0) {
-                if (key.equals("")) {
+                String str = scan.nextLine();
+                if (str.equals("")) {
                     System.out.println("false");
                     break;
+                } else {
+                    String[] tokens = str.split(",");
+                    Float[] floatarray = new Float[tokens.length];
+                    for (int i = 0; i < tokens.length; i++) {
+                        floatarray[i] = Float.parseFloat(tokens[i]);
+                    }
+                    MinPQ<Float> item = new MinPQ<Float>(floatarray);
+                    System.out.println(item.isMinPQ());
                 }
-                String[] tokens = scan.nextLine().split(",");
-                Float[] floatarray = new Float[tokens.length];
-                for (int i = 0; i < tokens.length; i++) {
-                    floatarray[i] = Float.parseFloat(tokens[i]);
-                }
-                MinPQ<Float> item = new MinPQ<Float>(floatarray);
-                System.out.println(item.isMinPQ());
                 n--;
             }
             break;
