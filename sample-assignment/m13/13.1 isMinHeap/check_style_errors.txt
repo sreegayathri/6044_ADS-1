@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] E:\6044_ADS-1\sample-assignment\m13\13.1 isMinHeap\Solution.java:30:63: ';' is preceded with whitespace. [NoWhitespaceBefore]
 Audit done.
-Checkstyle ends with 1 errors.

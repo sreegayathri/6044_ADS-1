@@ -27,12 +27,12 @@ public final class Solution  {
         case "String":
             while (n > 0) {
                 String[] tokens = scan.nextLine().split(",");
-                MinPQ<String> item = new MinPQ<String>(tokens) ;
+                MinPQ<String> item = new MinPQ<String>(tokens);
                 System.out.println(item.isMinPQ());
                 n--;
             }
             break;
-        case "Integer" :
+        case "Integer":
             while (n > 0) {
                 String[] tokens = scan.nextLine().split(",");
                 Integer[] integerarray = new Integer[tokens.length];
