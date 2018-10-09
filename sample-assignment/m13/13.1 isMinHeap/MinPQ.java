@@ -1,5 +1,5 @@
 /**.
- * Class for minimum pq.
+ * Class for Minimum PQ.
  *
  * @param      <Key>  The key
  */
