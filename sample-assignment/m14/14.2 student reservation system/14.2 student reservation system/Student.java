@@ -119,7 +119,7 @@ public class Student implements Comparable<Student> {
 
     public String toString() {
         String str = "";
-            str += this.studentname + "," + this.totalmarks + "," + this.reservation + "\n";
+            str += this.studentname + "," + this.totalmarks + "," + this.reservation;
         return str;
     }
 }

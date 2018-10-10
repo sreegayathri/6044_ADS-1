@@ -51,6 +51,6 @@ Starting audit...
 [ERROR] E:\6044_ADS-1\sample-assignment\m14\14.2 student reservation system\14.2 student reservation system\Student.java:102:19: 'if' is not followed by whitespace. [WhitespaceAround]
 [ERROR] E:\6044_ADS-1\sample-assignment\m14\14.2 student reservation system\14.2 student reservation system\Student.java:120:5: Class 'Student' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Student' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
 [ERROR] E:\6044_ADS-1\sample-assignment\m14\14.2 student reservation system\14.2 student reservation system\Student.java:120:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] E:\6044_ADS-1\sample-assignment\m14\14.2 student reservation system\14.2 student reservation system\Student.java:122: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] E:\6044_ADS-1\sample-assignment\m14\14.2 student reservation system\14.2 student reservation system\Student.java:122: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
 Checkstyle ends with 53 errors.
