@@ -6,7 +6,7 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {}
+    Solution() { }
     /**.
      * { main function}.
      *
@@ -15,8 +15,8 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String[] input = scan.nextLine().split(" ");
-        BinarySearchST<String, Integer> st = new BinarySearchST<String, Integer>
-        (input.length);
+        BinarySearchST<String, Integer> st = 
+                new BinarySearchST<String, Integer>(input.length);
         for (int i = 0; i < input.length; i++) {
             st.put(input[i], i);
         }
