@@ -26,13 +26,13 @@ public final class Solution {
         while (n > 0) {
             String[] tokens = sc.next().split(",");
             list[i++] = new Student(tokens[0], tokens[1], Integer.parseInt(tokens[2]),
-            Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]),
-            Integer.parseInt(tokens[5]), tokens[6]);
+            Integer.parseInt(tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]),
+            Integer.parseInt(tokens[2 + 2 + 1]), tokens[2 + 2 + 2]);
             n--;
         }
         Heap h = new Heap();
         h.sort(list);
-        for (int j = 0; j < i; j++) {
+        for (int j = 0; j < temp; j++) {
             System.out.println(list[i]);
         }
     }
