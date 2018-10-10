@@ -33,7 +33,7 @@ public final class Solution {
         Heap h = new Heap();
         h.sort(list);
         for (int j = 0; j < temp; j++) {
-            System.out.println(list[i]);
+            System.out.println(list[j]);
         }
     }
 }
