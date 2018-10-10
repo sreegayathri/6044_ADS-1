@@ -301,33 +301,14 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      *
      * @return all keys in this symbol table
      */
-    /**public Iterable<Key> keys() {
-        return keys(min(), max());
-    }*/
-/*
-    /**
-     * Returns all keys in this symbol table in the given range,
-     * as an {@code Iterable}.
-     *
-     * @param lo minimum endpoint
-     * @param hi maximum endpoint
-     * @return all keys in this symbol table between {@code lo} 
-     *         (inclusive) and {@code hi} (inclusive)
-     * @throws IllegalArgumentException if either {@code lo} or {@code hi}
-     *         is {@code null}
-     *//*
-    public Iterable<Key> keys(Key lo, Key hi) {
-        if (lo == null) throw new IllegalArgumentException("first argument to keys() is null"); 
-        if (hi == null) throw new IllegalArgumentException("second argument to keys() is null"); 
-
-        Queue<Key> queue = new Queue<Key>(); 
-        if (lo.compareTo(hi) > 0) return queue;
-        for (int i = rank(lo); i < rank(hi); i++) 
-            queue.enqueue(keys[i]);
-        if (contains(hi)) queue.enqueue(keys[rank(hi)]);
-        return queue; 
+    public void keys() {
+        for (int i = 0; i < n; i++) {
+            if (vals[i] != null) {
+                System.out.println(keys[i] + " " + vals[i]);
+            }
+        }
     }
-*/
+
     private boolean check() {
         return isSorted() && rankCheck();
     }

@@ -29,9 +29,9 @@ public class Solution{
             case "deleteMin":
                 st.deleteMin();
                 break;
-/*            case "keys":
+            case "keys":
                 st.keys();
-                break;*/
+                break;
             default:
                 break;
             }
