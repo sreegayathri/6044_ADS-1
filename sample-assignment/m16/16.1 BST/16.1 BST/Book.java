@@ -2,15 +2,15 @@
  * Class for book.
  */
 class Book {
-    /**
+    /**.
      * bookname.
      */
     private String bookname;
-    /**
+    /**.
      * author.
      */
     private String author;
-    /**
+    /**.
      * price.
      */
     private Double price;
