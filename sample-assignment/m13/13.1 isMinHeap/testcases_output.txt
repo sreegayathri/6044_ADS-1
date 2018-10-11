@@ -5,12 +5,15 @@ false
 true
 false
 Your Output: 
-true
-true
-true
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
+	at MinPQ.less(MinPQ.java:53)
+	at MinPQ.isMinPQ(MinPQ.java:39)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:31)
+	at Solution.main(Solution.java:31)
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 false
 false
@@ -19,12 +22,12 @@ false
 false
 false
 Your Output: 
-true
-true
-true
-true
-true
-true
+false
+false
+false
+false
+false
+false
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -37,14 +40,13 @@ false
 true
 false
 Your Output: 
-true
-true
-true
-true
-true
-true
-true
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 9
+	at MinPQ.less(MinPQ.java:53)
+	at MinPQ.isMinPQ(MinPQ.java:40)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:31)
+	at Solution.main(Solution.java:43)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -52,17 +54,28 @@ true
 false
 false
 Your Output: 
-true
-true
-true
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 324
+	at MinPQ.less(MinPQ.java:53)
+	at MinPQ.isMinPQ(MinPQ.java:39)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:41)
+	at MinPQ.isMinPQ(MinPQ.java:31)
+	at Solution.main(Solution.java:73)
 ----------------------------------------
-########## Testcase 4: Passed ##########
+########## Testcase 4: Failed ##########
 Expected Output: 
 true
 true
 false
 Your Output: 
-true
-true
-false
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at MinPQ.less(MinPQ.java:53)
+	at MinPQ.isMinPQ(MinPQ.java:39)
+	at MinPQ.isMinPQ(MinPQ.java:31)
+	at Solution.main(Solution.java:60)
 ----------------------------------------
