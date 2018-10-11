@@ -20,7 +20,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the teamname.
-	 *
+	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The teamname.
 	 */
 	public String getTeamname() {
@@ -28,7 +30,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the wins.
-	 *
+ 	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The wins.
 	 */
 	public int getWins() {
@@ -36,7 +40,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the losses.
-	 *
+	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The losses.
 	 */
 	public int getLosses() {
@@ -44,52 +50,15 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the draws.
-	 *
+	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The draws.
 	 */
 	public int getDraws() {
 		return this.draws;
 	}
-	/**
-	 * Sets the teamname.
-	 *
-	 * @param      teamname  The teamname
-	 */
-	public void setTeamname(String teamname) {
-		this.teamname = teamname;
-	}
-	/**
-	 * Sets the wins.
-	 *
-	 * @param      wins  The wins
-	 */
-	public void setWins(int wins) {
-		this.wins = wins;
-	}
-	/**
-	 * Sets the losses.
-	 *
-	 * @param      losses  The losses
-	 */
-	public void setLosses(int losses) {
-		this.losses = losses;
-	}
-	/**
-	 * Sets the draws.
-	 *
-	 * @param      draws  The draws
-	 */
-	public void setDraws(int draws) {
-		this.draws = draws;
-	}
-	/**
-	 * Returns a string representation of the object.
-	 *
-	 * @return     String representation of the object.
-	 */
-	public String toString() {
-		return this.teamname;
-	}
+
 	/**
 	 * { compares two objects for given condition }
 	 *

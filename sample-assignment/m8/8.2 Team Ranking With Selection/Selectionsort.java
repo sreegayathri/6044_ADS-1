@@ -4,7 +4,9 @@
 class Selectionsort {
 	/**
 	 * { method to sort all the elements in array. }
-	 *
+	 * best case: O(n^2)
+     * worst case: O(n^2)
+     * average case: O(n^2)
 	 * @param      a     { comparable array}
 	 */
 	public static void sort(final Comparable[] a) {
