@@ -18,7 +18,7 @@ public class MinPQ <Key extends Comparable <Key>> {
      * @param      array  The array
      */
     MinPQ(final Key[] array) {
-        this.n = array.length;
+        this.n = array.length - 1;
         this.pq = array;
     }
     /**
