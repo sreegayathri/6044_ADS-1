@@ -9,11 +9,16 @@ public class MinPQ <Key extends Comparable <Key>> {
      */
     private Key[] pq;
     /**.
+     * { var_description }
+     */
+    private int n;
+    /**.
      * Constructs the object for class MinPQ
      *
      * @param      array  The array
      */
     MinPQ(final Key[] array) {
+        this.n = 0;
         this.pq = array;
     }
     /**
@@ -21,14 +26,21 @@ public class MinPQ <Key extends Comparable <Key>> {
      * TIme complexityis N because for loop iterates for N times.
      * @return     True if minimum pq, False otherwise.
      */
+    // is pq[1..N] a min heap?
     public boolean isMinPQ() {
-        for (int i = 0; i < pq.length - 1; i++) {
-            if (less(i + 1, i)) {
-                return false;
-            }
-        }
-        return true;
+        return isMinPQ(1);
     }
+
+    // is subtree of pq[1..n] rooted at k a min heap?
+    public boolean isMinPQ(int k) {
+        if (k > n) return true;
+        int left = 2*k;
+        int right = 2*k + 1;
+        if (left  <= n && less(left, k))  return false;
+        if (right <= n && less(right, k)) return false;
+        return isMinPQ(left) && isMinPQ(right);
+    }
+
     /**
      * { compares two elements of pq array }
      *  Time complexity is constant the statement is executed only once
