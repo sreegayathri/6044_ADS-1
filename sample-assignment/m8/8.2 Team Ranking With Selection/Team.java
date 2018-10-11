@@ -58,7 +58,46 @@ class Team implements Comparable<Team> {
 	public int getDraws() {
 		return this.draws;
 	}
-
+/**
+	 * Sets the teamname.
+	 *
+	 * @param      teamname  The teamname
+	 */
+	public void setTeamname(String teamname) {
+		this.teamname = teamname;
+	}
+	/**
+	 * Sets the wins.
+	 *
+	 * @param      wins  The wins
+	 */
+	public void setWins(int wins) {
+		this.wins = wins;
+	}
+	/**
+	 * Sets the losses.
+	 *
+	 * @param      losses  The losses
+	 */
+	public void setLosses(int losses) {
+		this.losses = losses;
+	}
+	/**
+	 * Sets the draws.
+	 *
+	 * @param      draws  The draws
+	 */
+	public void setDraws(int draws) {
+		this.draws = draws;
+	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
+	public String toString() {
+		return this.teamname;
+	}
 	/**
 	 * { compares two objects for given condition }
 	 *
