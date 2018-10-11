@@ -1,28 +1,28 @@
-/**
+/**.
  * Class for binary search tree.
  */
 class BinarySearchTree {
-    /**
+    /**.
      * Class for node.
      */
     class Node {
-        /**
+        /**.
          * key.
          */
         private Book key;
-        /**
+        /**.
          * value.
          */
         private Integer value;
-        /**
+        /**.
          * left.
          */
         private Node left;
-        /**
+        /**.
          * right.
          */
         private Node right;
-        /**
+        /**.
          * Constructs the object.
          *
          * @param      key     { parameter_description }
@@ -35,17 +35,17 @@ class BinarySearchTree {
             this.right = null;
         }
     }
-    /**
+    /**.
      * root.
      */
     private Node root;
-    /**
+    /**.
      * Constructs the object.
      */
     BinarySearchTree() {
         root = null;
     }
-    /**
+    /**.
      * put.
      *
      * @param      key    The key
@@ -54,8 +54,8 @@ class BinarySearchTree {
     public void put(final Book key, final Integer value) {
         root = put(root, key, value);
     }
-    /**
-     * put.
+    /**.
+     * putmethod.
      *
      * @param      x      { parameter_description }
      * @param      key    The key
@@ -77,8 +77,8 @@ class BinarySearchTree {
         }
         return x;
     }
-    /**
-     * get.
+    /**.
+     * get method.
      *
      * @param      key   The key
      *
@@ -88,7 +88,7 @@ class BinarySearchTree {
         return get(root, key);
     }
     /**
-     * get.
+     * getmethod.
      *
      * @param      x     { parameter_description }
      * @param      key   The key
