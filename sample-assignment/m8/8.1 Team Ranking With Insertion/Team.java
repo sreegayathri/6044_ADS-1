@@ -20,7 +20,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the teamname.
-	 *
+	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The teamname.
 	 */
 	public String getTeamname() {
@@ -28,7 +30,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the wins.
-	 *
+ 	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The wins.
 	 */
 	public int getWins() {
@@ -36,7 +40,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the losses.
-	 *
+	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The losses.
 	 */
 	public int getLosses() {
@@ -44,7 +50,9 @@ class Team implements Comparable<Team> {
 	}
 	/**
 	 * Gets the draws.
-	 *
+	 * best case: O(1)
+     * worst case: O(1)
+     * aversge case: O(1)
 	 * @return     The draws.
 	 */
 	public int getDraws() {

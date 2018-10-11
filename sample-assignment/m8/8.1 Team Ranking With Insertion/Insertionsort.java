@@ -3,6 +3,9 @@
  */
 class Insertionsort {
     /**
+     * best case: O(n^2)
+     * worst case: O(n^2)
+     * average case: O(n^2)
      * { sorts all the elements in comparable array }
      * time complexity is N**2. Because inner forloop executes for N times and outer for loop also executes for N times.
      * @param      a     { Comparable array }
