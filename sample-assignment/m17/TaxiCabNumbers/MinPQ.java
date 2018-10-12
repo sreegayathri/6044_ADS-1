@@ -225,7 +225,7 @@ public class MinPQ<Key> implements Iterable<Key> {
         public HeapIterator() {
             if (comparator == null) copy = new MinPQ<Key>(size());
             else                    copy = new MinPQ<Key>(size(), comparator);
-            for (int i = 1; i <= n; i++)
+            for (int i = 1; i <= n; i++)	
                 copy.insert(pq[i]);
         }
 
