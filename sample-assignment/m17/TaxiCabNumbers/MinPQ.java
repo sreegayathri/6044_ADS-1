@@ -105,8 +105,10 @@ public class MinPQ<Key> implements Iterable<Key> {
         if (isEmpty()) throw new NoSuchElementException("Priority queue underflow");
         return pq[1];
     }
-
-    // helper function to double the size of the heap array
+/**
+ * resize the array after every deletion and insertion.
+ */
+   // helper function to double the size of the heap array
     private void resize(int capacity) {
         assert capacity > n;
         Key[] temp = (Key[]) new Object[capacity];
