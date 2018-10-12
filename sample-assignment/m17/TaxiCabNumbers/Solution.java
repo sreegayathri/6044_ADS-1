@@ -1,6 +1,3 @@
-/**.
- * imports Scanner package
- */
 import java.util.Scanner;
 /**.
  * This class is used to find the nth taxicab numbers
