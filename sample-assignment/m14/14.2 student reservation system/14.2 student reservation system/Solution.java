@@ -1,19 +1,21 @@
-import java.util.*;
+import java.util.Scanner;
 /**
- * { item_description }
+ * Class for solution.
  */
-public final class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	Solution() {}
-	/**
-	 * { function_description }
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(final String[] args) {
-		Scanner sc = new Scanner(System.in);
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //function.
+    }
+    /**
+     * main.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
         int o = Integer.parseInt(sc.nextLine());
         int p = Integer.parseInt(sc.nextLine());
@@ -26,14 +28,12 @@ public final class Solution {
         while (n > 0) {
             String[] tokens = sc.next().split(",");
             list[i++] = new Student(tokens[0], tokens[1], Integer.parseInt(tokens[2]),
-            Integer.parseInt(tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]),
-            Integer.parseInt(tokens[2 + 2 + 1]), tokens[2 + 2 + 2]);
+            Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]),
+            Integer.parseInt(tokens[5]), tokens[6]);
             n--;
         }
-        Heap h = new Heap();
-        h.sort(list);
-        for (int j = 0; j < temp; j++) {
-            System.out.println(list[j]);
-        }
+        Heap h = new Heap(o, p, q, r, s, list, i);
+        list = h.sort();
+        h.board(temp);
     }
 }

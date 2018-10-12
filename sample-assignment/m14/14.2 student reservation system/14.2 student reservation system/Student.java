@@ -1,106 +1,137 @@
-/**.
- * Class for student.
+/**
+ * Class for details of Student.
  */
-public class Student implements Comparable<Student> {
-	private String studentname;
-	private String dob;
-	private int sub1marks;
-	private int sub2marks;
-	private int sub3marks;
-	private int totalmarks;
-	private String reservation;
-	/**.
-	 * Constructs the object.
-	 * @param      studentname  The studentname
-	 * @param      dob          The dob
-	 * @param      sub1marks    The sub 1 marks
-	 * @param      sub2marks    The sub 2 marks
-	 * @param      sub3marks    The sub 3 marks
-	 * @param      totalmarks   The totalmarks
-	 * @param      reservation  The reservation
-	 */
-	Student(String studentname, String dob, int sub1marks, int sub2marks, int sub3marks,
-					int totalmarks, String reservation) {
-		this.studentname = studentname;
-		this.dob = dob;
-		this.sub1marks = sub1marks;
-		this.sub2marks = sub2marks;
-		this.sub3marks = sub3marks;
-		this.totalmarks = totalmarks;
-		this.reservation = reservation;
-	}
+class Student implements Comparable<Student> {
+    /**
+     * name of student.
+     */
+    private String name;
+    /**
+     * date of birth.
+     */
+    private String dob;
+    /**
+     * subject 1 marks.
+     */
+    private Integer s1marks;
+    /**
+     * subject 2 marks.
+     */
+    private Integer s2marks;
+    /**
+     * subject 3 marks.
+     */
+    private Integer s3marks;
+    /**
+     * totalmarks.
+     */
+    private Integer total;
+    /**
+     * reservation category.
+     */
+    private String rcat;
+    /**
+     * constuctor.
+     *
+     * @param      stu   name of student
+     * @param      date   date of birth
+     * @param      s1     subject 1 marks
+     * @param      s2     subject 2 marks
+     * @param      s3     subject 3 marks
+     * @param      to     total marks
+     * @param      res    reservation
+     */
+    Student(final String stu, final String date, final Integer s1,
+     final Integer s2, final Integer s3, final Integer to, final String res) {
+        this.name = stu;
+        this.dob = date;
+        this.s1marks = s1;
+        this.s2marks = s2;
+        this.s3marks = s3;
+        this.total = to;
+        this.rcat = res;
 
-	/**.
-	 * gets the name.
-	 * @param      studentname  The studentname
-	 * @return     { description_of_the_return_value }
-	 */
-	public String getName() {
-		return this.studentname;
-	}
-	/**.
-	 * { function_description }
-	 * @param      dob   The dob
-	 * @return     { description_of_the_return_value }
-	 */
-	public String getDob(){
-		return this.dob;
-	}
-	/**.
-	 * gets the subone.
-	 * @param      sub1marks  The sub 1 marks
-	 * @return     { description_of_the_return_value }
-	 */
-	public int getsubone(){
-		return this.sub1marks;
-	}
-	/**.
-	 * gets the subtwo.
-	 * @param      sub2marks  The sub 2 marks
-	 * @return     { description_of_the_return_value }
-	 */
-	public int getsubtwo(){
-		return this.sub2marks;
-	}
-	/**.
-	 * gets the subthree.
-	 * @param      sub3marks  The sub 3 marks
-	 * @return     { description_of_the_return_value }
-	 */
-	public int  getsubthree(){
-		return this.sub3marks;
-	}
-	/**.
-	 * gets the totalmarks.
-	 * @param      totalmarks  The totalmarks
-	 * @return     { description_of_the_return_value }
-	 */
-	public int  getTotalmarks(){
-		return this.totalmarks;
-	}
-	/**.
-	 * gets the reservation.
-	 * @param      reservation  The reservatio
-	 * @return     { description_of_the_return_value }
-	 */
-	public String getReservation(){
-		return this.reservation;
-	}
-	/**.
-	 * { function_description }
-	 * @param      that  The that
-	 * @return     { description_of_the_return_value }
-	 */
-	public int compareTo(Student that) {
-		String[] d1 = this.getDob().split("-");
-        String[] d2 = that.getDob().split("-");
-		if(this.totalmarks > that.totalmarks) return -1;
-		if(this.totalmarks < that.totalmarks) return 1;
-		if(this.sub3marks > that.sub3marks) return -1;
-		if(this.sub3marks < that.sub3marks) return 1;
-		if(this.sub2marks > that.sub2marks) return -1;
-		if(this.sub2marks < that.sub2marks) return 1;
-		if (Integer.parseInt(d1[2]) > Integer.parseInt(d2[2])) {
+    }
+    /**
+     * returns total.
+     *
+     * best case: O(1)
+     * worst case: O(1)
+     * average case: O(1)
+     *
+     * @return     toatalmarks.
+     */
+    public Integer gettotal() {
+        return this.total;
+    }
+    /**
+     * returns s3 marks.
+     *
+     * best case: O(1)
+     * worst case: O(1)
+     * average case: O(1)
+     *
+     * @return     s3marks.
+     */
+    public Integer gets3marks() {
+        return this.s3marks;
+    }
+    /**
+     * returns s2 marks.
+     *
+     * best case: O(1)
+     * worst case: O(1)
+     * average case: O(1)
+     *
+     * @return     s2marks.
+     */
+    public Integer gets2marks() {
+        return this.s2marks;
+    }
+    /**
+     * returns date no of birth.
+     *
+     * best case: O(1)
+     * worst case: O(1)
+     * average case: O(1)
+     *
+     * @return     date..
+     */
+    public String getdob() {
+        return this.dob;
+    }
+    /**
+     * returns reservation.
+     *
+     * best case: O(1)
+     * worst case: O(1)
+     * average case: O(1)
+     *
+     * @return     reservation.
+     */
+    public String getres() {
+        return this.rcat;
+    }
+    /**
+     * returns int.
+     *
+     * best case: O(1)
+     * worst case: O(1)
+     * average case: O(1)
+     *
+     * @return     int.
+     */
+    /**
+     * comparedate.
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Integer comparedate(final Student that) {
+        String[] d1 = this.getdob().split("-");
+        String[] d2 = that.getdob().split("-");
+        if (Integer.parseInt(d1[2]) > Integer.parseInt(d2[2])) {
             return 1;
         } else if (Integer.parseInt(d1[2]) < Integer.parseInt(d2[2])) {
             return -1;
@@ -115,11 +146,40 @@ public class Student implements Comparable<Student> {
         } else {
             return 0;
         }
-	}
-
+    }
+    /**
+    * Returns a string representation of the object.
+    *
+    * @return     String representation of the object.
+    * best case: O(1)
+    * worst case: O(1)
+    * average case: O(1)
+    */
     public String toString() {
-        String str = "";
-            str += this.studentname + "," + this.totalmarks + "," + this.reservation;
-        return str;
+        return name + "," + Integer.toString(total) + "," + rcat;
+    }
+    /**
+         * Checks the various attributes and returns -1 or 0 or 1 accordingly.
+         *
+         * @param      that  The that
+         *
+         * @return     -1 or 0 or 1
+         */
+    public int compareTo(final Student that) {
+        if (this.gettotal() > that.gettotal()) {
+            return 1;
+        } else if (this.gettotal() < that.gettotal()) {
+            return -1;
+        } else if (this.gets3marks() > that.gets3marks()) {
+            return 1;
+        } else if (this.gets3marks() < that.gets3marks()) {
+            return -1;
+        } else if (this.gets2marks() > that.gets2marks()) {
+            return 1;
+        } else if (this.gets2marks() < that.gets2marks()) {
+            return -1;
+        } else {
+            return comparedate(that);
+        }
     }
 }
