@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 put,Algorithms,Bob Sedgewick,6000.0,1
 put,Python,eric,5000,2
+=======
+put,Algorithms,Bob Sedgewick,6000.0,1
+put,Python,eric,5000,2
+>>>>>>> aad999d34dd3fdaa0f6842661f0b26239fbae5fa
 get,Algorithms,Bob Sedgewick,6000.0

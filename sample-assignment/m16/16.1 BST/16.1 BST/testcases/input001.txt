@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 put,Harry,JK,600.0,1
 put,IT,Viswas,400.0,2
 put,Street,Kiran,800.0,6
@@ -6,4 +7,14 @@ put,Hello,Ajay,200.0,5
 get,Hello,Ajay,200.0
 put,Hello,Ajay,200.0,7
 get,Hello,Ajay,200.0
+=======
+put,Harry,JK,600.0,1
+put,IT,Viswas,400.0,2
+put,Street,Kiran,800.0,6
+get,Street,Kiran,800.0
+put,Hello,Ajay,200.0,5
+get,Hello,Ajay,200.0
+put,Hello,Ajay,200.0,7
+get,Hello,Ajay,200.0
+>>>>>>> aad999d34dd3fdaa0f6842661f0b26239fbae5fa
 get,IT,Viswas,400.0

@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 England,10,14,1
 India,10,14,2
 Australia,10,14,3
 SouthAfrica,10,14,4
 Bangladesh,10,14,5
 Zimbabwe,10,14,6
+=======
+England,10,14,1
+India,10,14,2
+Australia,10,14,3
+SouthAfrica,10,14,4
+Bangladesh,10,14,5
+Zimbabwe,10,14,6
+>>>>>>> aad999d34dd3fdaa0f6842661f0b26239fbae5fa
 Ireland,10,14,7

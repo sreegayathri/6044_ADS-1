@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 true
 false
 true
 false
+=======
+true
+false
+true
+false
+>>>>>>> aad999d34dd3fdaa0f6842661f0b26239fbae5fa
