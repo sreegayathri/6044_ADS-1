@@ -175,9 +175,7 @@ public class Solution {
     /**.
     * Constructs the object.
     */
-    Solution() {
-
-    }
+    Solution() {}
     /**.
     * { function_description }
     *
