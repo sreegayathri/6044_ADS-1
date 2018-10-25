@@ -12,10 +12,10 @@ class Solution {
 		for (int i = 0; i < m; i++) {
 			h.put(magazine[i], 1);
 		}
-		boolean flag = true;
+		boolean flag = false;
 		for (int i = 0; i < n; i++) {
 			if (h.get(note[i]) != h.get(note[i])) {
-				flag = false;
+				flag = true;
 				System.out.println("No");
 				break;
 			}
