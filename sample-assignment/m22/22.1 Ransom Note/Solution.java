@@ -8,7 +8,7 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -18,7 +18,8 @@ public final class Solution {
         int n = sc.nextInt();
         sc.nextLine();
         String[] magazine = sc.nextLine().split(" ");
-        SeparateChainingHashST<String, Integer> h = new SeparateChainingHashST<>();
+        SeparateChainingHashST<String, Integer> h =
+            new SeparateChainingHashST<>();
         for (int i = 0; i < m; i++) {
             if (h.contains(magazine[i])) {
                 h.put(magazine[i], h.get(magazine[i]) + 1);

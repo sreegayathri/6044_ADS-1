@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:10: First sentence should end with a period. [JavadocStyle]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:21: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 3 errors.
