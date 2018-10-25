@@ -27,9 +27,9 @@ class Solution {
 					h.put(note[j], h.get(note[j]) - 1);
 				}
 			}
-			if (flag) {
-				System.out.println("Yes");
-			}
+		}
+		if (flag) {
+			System.out.println("Yes");
 		}
 
 	}
