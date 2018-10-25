@@ -3,7 +3,7 @@ public class SeparateChainingHashST<Key, Value> {
 
     private int n;                                // number of key-value pairs
     private int m;                                // hash table size
-    private SequentialSearchST<Key, Value>[] st;  // array of linked-list symbol tables
+    private RansomNote<Key, Value>[] st;  // array of linked-list symbol tables
 
 
     /**
@@ -19,9 +19,9 @@ public class SeparateChainingHashST<Key, Value> {
      */
     public SeparateChainingHashST(int m) {
         this.m = m;
-        st = (SequentialSearchST<Key, Value>[]) new SequentialSearchST[m];
+        st = (RansomNote<Key, Value>[]) new RansomNote[m];
         for (int i = 0; i < m; i++)
-            st[i] = new SequentialSearchST<Key, Value>();
+            st[i] = new RansomNote<Key, Value>();
     } 
 
     // resize the hash table to have the given number of chains,
@@ -143,22 +143,22 @@ public class SeparateChainingHashST<Key, Value> {
     } 
 
 
-    /**
-     * Unit tests the {@code SeparateChainingHashST} data type.
-     *
-     * @param args the command-line arguments
-     */
-/*    public static void main(String[] args) { 
-        SeparateChainingHashST<String, Integer> st = new SeparateChainingHashST<String, Integer>();
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
+    // /**
+    //  * Unit tests the {@code SeparateChainingHashST} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // public static void main(String[] args) { 
+    //     SeparateChainingHashST<String, Integer> st = new SeparateChainingHashST<String, Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
 
-        // print keys
-        for (String s : st.keys()) 
-            StdOut.println(s + " " + st.get(s)); 
+    //     // print keys
+    //     for (String s : st.keys()) 
+    //         StdOut.println(s + " " + st.get(s)); 
 
-    }*/
+    // }
 
 }

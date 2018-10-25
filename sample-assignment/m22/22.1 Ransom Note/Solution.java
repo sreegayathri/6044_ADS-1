@@ -7,22 +7,30 @@ class Solution {
 		int n = sc.nextInt();
 		sc.nextLine();
 		String[] magazine = sc.nextLine().split(" ");
-		String[] note = sc.nextLine().split(" ");
-		RansomNote h = new RansomNote();
+		SeparateChainingHashST h = new SeparateChainingHashST();
 		for (int i = 0; i < m; i++) {
-			h.put(magazine[i], 1);
-		}
-		boolean flag = true;
-		for (int j = 0; j < n; j++) {
-			if (h.get(magazine[j]) != h.get(note[j])) {
-				flag = false;
-				System.out.println("No");
-				break;
+			if (h.contains(magazine[i])) {
+				h.put(magazine[i], (int)h.get(magazine[i]) + 1);
+			} else {
+				h.put(magazine[i], 1);
 			}
 		}
-		if (flag) {
-			System.out.println("Yes");
+		String[] note = sc.nextLine().split(" ");
+		boolean flag = true;
+		for (int j = 0; j < n; j++) {
+			if (h.contains(note[j])) {
+				if ((int)h.get(note[j]) == 0) {
+					flag = false;
+					System.out.println("No");
+					break;
+				} else {
+					h.put(note[j], (int)h.get(note[j]) - 1);
+				}
+			}
+			if (flag) {
+				System.out.println("Yes");
+			}
 		}
-	}
 
+	}
 }
