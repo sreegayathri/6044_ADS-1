@@ -14,7 +14,7 @@ class Solution {
 		}
 		boolean flag = true;
 		for (int j = 0; j < n; j++) {
-			if (h.get(note[j]) != h.get(note[j])) {
+			if (h.get(magazine[j]) != h.get(note[j])) {
 				flag = false;
 				System.out.println("No");
 				break;
