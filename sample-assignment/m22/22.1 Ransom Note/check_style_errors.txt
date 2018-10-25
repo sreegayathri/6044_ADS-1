@@ -1,10 +1,7 @@
 Starting audit...
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:4:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:4:33: Parameter args should be final. [FinalParameters]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:10: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:5:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:10: First sentence should end with a period. [JavadocStyle]
+[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:15:29: Parameter args should be final. [FinalParameters]
+[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:21: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 4 errors.
