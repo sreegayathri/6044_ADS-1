@@ -18,7 +18,11 @@ class Solution {
 		String[] note = sc.nextLine().split(" ");
 		boolean flag = true;
 		for (int j = 0; j < n; j++) {
+			// System.out.println(note[j]);
+			// System.out.println("__________");
 			if (h.contains(note[j])) {
+				System.out.println(h.contains(note[j]));
+				// System.out.println("__________");
 				if (h.get(note[j]) == 0) {
 					System.out.println("No");
 					flag = false;
@@ -26,11 +30,11 @@ class Solution {
 				} else {
 					h.put(note[j], h.get(note[j]) - 1);
 				}
+			} else {
+				System.out.println("No");
+				return;
 			}
 		}
-		if (flag) {
-			System.out.println("Yes");
-		}
-
+		System.out.println("Yes");
 	}
 }
