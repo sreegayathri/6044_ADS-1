@@ -106,32 +106,32 @@ public class RansomNote<Key, Value> {
     }
 
 
-    /**
-     * Returns all keys in the symbol table as an {@code Iterable}.
-     * To iterate over all of the keys in the symbol table named {@code st},
-     * use the foreach notation: {@code for (Key key : st.keys())}.
-     * @return all keys in the symbol table as an {@code Iterable}
-     */
-    public Iterable<Key> keys()  {
-        Queue<Key> queue = new Queue<Key>();
-        for (Node x = first; x != null; x = x.next)
-            queue.enqueue(x.key);
-        return queue;
-    }
+    // /**
+    //  * Returns all keys in the symbol table as an {@code Iterable}.
+    //  * To iterate over all of the keys in the symbol table named {@code st},
+    //  * use the foreach notation: {@code for (Key key : st.keys())}.
+    //  * @return all keys in the symbol table as an {@code Iterable}
+    //  */
+    // public Iterable<Key> keys()  {
+    //     Queue<Key> queue = new Queue<Key>();
+    //     for (Node x = first; x != null; x = x.next)
+    //         queue.enqueue(x.key);
+    //     return queue;
+    // }
 
 
-    /**
-     * Unit tests the {@code RansomNote} data type.
-     *
-     * @param args the command-line arguments
-     */
-    /*public static void main(String[] args) {
-        RansomNote<String, Integer> st = new RansomNote<String, Integer>();
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
-        for (String s : st.keys())
-            StdOut.println(s + " " + st.get(s));
-    }*/
+    // /**
+    //  * Unit tests the {@code RansomNote} data type.
+    //  *
+    //  * @param args the command-line arguments
+    //  */
+    // /*public static void main(String[] args) {
+    //     RansomNote<String, Integer> st = new RansomNote<String, Integer>();
+    //     for (int i = 0; !StdIn.isEmpty(); i++) {
+    //         String key = StdIn.readString();
+    //         st.put(key, i);
+    //     }
+    //     for (String s : st.keys())
+    //         StdOut.println(s + " " + st.get(s));
+    // }*/
 }

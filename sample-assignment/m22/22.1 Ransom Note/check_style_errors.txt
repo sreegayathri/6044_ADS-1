@@ -5,8 +5,6 @@ Starting audit...
 [ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:3:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:4:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:4:33: Parameter args should be final. [FinalParameters]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:13:57: 'typecast' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:22:42: 'typecast' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:27:61: 'typecast' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] G:\6044_ADS-1\sample-assignment\m22\22.1 Ransom Note\Solution.java:10: Line is longer than 80 characters (found 91). [LineLength]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 7 errors.
