@@ -1,5 +1,5 @@
 /**.
- * { item_description }
+ * @author sreegayathri.
  */
 import java.util.Scanner;
 /**.
