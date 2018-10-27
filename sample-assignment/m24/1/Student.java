@@ -17,7 +17,7 @@ class Student {
     /**
      * Constructs with parameters.
      *
-     * @param      name   The name
+     * @param      student   The student name
      * @param      marks  The marks
      */
     Student(final String student, final Double marks) {
