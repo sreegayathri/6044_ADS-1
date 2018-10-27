@@ -17,7 +17,7 @@ final class Solution {
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int data = Integer.parseInt(scan.nextLine());
-		LinearProbingHashST<Integer, Student> hash = new LinearProbingHashST<Integer, Student>(data);
+		LinearProbingHashST<Integer, Student> hash = new LinearProbingHashST<Integer, Student>();
 		for(int i = 0; i < data; i++) {
 			String[] tokens = scan.nextLine().split(",");
 			hash.put(Integer.parseInt(tokens[0]), new Student(tokens[1], Double.parseDouble(tokens[2])));
