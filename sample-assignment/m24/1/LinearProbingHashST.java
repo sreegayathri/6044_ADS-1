@@ -1,4 +1,10 @@
 import java.lang.IllegalArgumentException;
+/**.
+ * Class for linear probing hash st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 public class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
@@ -6,8 +12,6 @@ public class LinearProbingHashST<Key, Value> {
     private int m;           // size of linear probing table
     private Key[] keys;      // the keys
     private Value[] vals;    // the values
-
-
     /**
      * Initializes an empty symbol table.
      */
@@ -23,7 +27,7 @@ public class LinearProbingHashST<Key, Value> {
     public LinearProbingHashST(int capacity) {
         m = capacity;
         n = 0;
-        keys = (Key[])   new Object[m];
+        keys = (Key[]) new Object[m];
         vals = (Value[]) new Object[m];
     }
 
@@ -74,7 +78,7 @@ public class LinearProbingHashST<Key, Value> {
         }
         keys = temp.keys;
         vals = temp.vals;
-        m    = temp.m;
+        m = temp.m;
     }
 
     /**
@@ -150,7 +154,7 @@ public class LinearProbingHashST<Key, Value> {
         i = (i + 1) % m;
         while (keys[i] != null) {
             // delete keys[i] an vals[i] and reinsert
-            Key   keyToRehash = keys[i];
+            Key keyToRehash = keys[i];
             Value valToRehash = vals[i];
             keys[i] = null;
             vals[i] = null;

@@ -2,10 +2,17 @@
  * {Student class}.
  */
 class Student {
+    /**
+     * rollnumber of student.
+     */
     private int rollnumber;
-     // name of the student.
+    /**
+     * name of the student.
+     */
     private String name;
-     //total marks of student.
+    /**
+     * total marks of student.
+     */
     private Double totalmarks;
     /**
      * Constructs with parameters.
@@ -13,8 +20,8 @@ class Student {
      * @param      name   The name
      * @param      marks  The marks
      */
-    Student(final String name, final Double marks) {
-        this.name = name;
+    Student(final String student, final Double marks) {
+        this.name = student;
         this.totalmarks = marks;
     }
     /**
