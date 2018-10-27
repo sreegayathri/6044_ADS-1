@@ -20,6 +20,7 @@ final class Solution {
 		LinearProbingHashST<Integer, Student> hash = new LinearProbingHashST<Integer, Student>();
 		for(int i = 0; i < data; i++) {
 			String[] tokens = scan.nextLine().split(",");
+			//System.out.println(tokens);
 			hash.put(Integer.parseInt(tokens[0]), new Student(tokens[1], Double.parseDouble(tokens[2])));
 		}
 		int query = Integer.parseInt(scan.nextLine());
