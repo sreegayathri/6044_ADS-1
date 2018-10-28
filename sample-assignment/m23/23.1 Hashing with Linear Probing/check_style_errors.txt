@@ -1,6 +1,4 @@
 Starting audit...
 [ERROR] G:\6044_ADS-1\sample-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] G:\6044_ADS-1\sample-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:5:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] G:\6044_ADS-1\sample-assignment\m23\23.1 Hashing with Linear Probing\Solution.java:19:31: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.

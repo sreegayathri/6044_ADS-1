@@ -6,7 +6,7 @@ public final class Solution {
     /**
      * Constructs the h.
      */
-    Solution() { }
+    private Solution() { }
     /**
      * { function_description }.
      *
@@ -16,7 +16,7 @@ public final class Solution {
         Scanner scan = new Scanner(System.in);
         LinearProbingHashST<String, Integer> h = new
             LinearProbingHashST<String, Integer>();
-        while (scan.hasNext()){
+        while (scan.hasNext()) {
             String[] tokens = scan.nextLine().split(" ");
             switch (tokens[0]) {
                 case "put":
