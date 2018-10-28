@@ -13,7 +13,7 @@ class Steque {
 /**
  * Constructs the object.
  */
-    public Steque() {
+    Steque() {
         front = null;
         rear = null;
         size = 0;

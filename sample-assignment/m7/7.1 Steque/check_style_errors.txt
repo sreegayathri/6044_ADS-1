@@ -1,5 +1,4 @@
 Starting audit...
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:16:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
