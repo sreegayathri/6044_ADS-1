@@ -1,248 +1,390 @@
-class BinarySearchTree<Key extends Comparable<Key>, Value> {
-	Node head;
-	BinarySearchTree() {
 
-	}
-	/**Creating Node with key=Book, value.
-	** 
-	**
-	**/
-	private class Node {
-		private Book key;
-		private Value value;
-		private Node left;
-		private Node right;
-		private int count;
-	}
-	// time complexity is O (log N)
-	public void put(Book k, Value v) {
-		if (k == null) {
-			System.out.println("key is null");
-		}
-		head = put(head, k, v);
-	}
-	// time complexity is O (log N)
-	public Node put(Node head, Book k, Value v) {
-		if (head == null) {
-			Node n = new Node();
-			n.key = k;
-			n.value = v;
-			n.left = null;
-			n.right = null;
-			n.count = 1;
-			head = n;
-		}
-		int index = k.compareTo(head.key);
-		if (index < 0) {
-			head.left = put(head.left, k, v);
-		} else if (index > 0) {
-			head.right = put(head.right, k, v);
-		} else {
-			head.value = v;
-		}
-		head.count = 1 + size(head.left) + size(head.right);
-		return head;
-	}
-	// time complexity is O (log N)
-	public Value get(Book k) {
-		return get(head, k);
-	}
-	// time complexity is O (log N)
-	public Value get(Node head, Book k) {
-		// System.out.println("deepak");
-		if (k == null) {
-			System.out.println("key is null");
-		}
-		if (head == null) {
-			return null;
-		}
-		int index = k.compareTo(head.key);
-		if (index < 0) {
-			return get(head.left, k);
-		} else if (index > 0) {
-			return get(head.right, k);
-		} else {
-			return head.value;
-		}
-	}
-	public Book min() {
-		return min(head).key;
-	}
-	public Node min(Node head) {
-		if (head.left == null) {
-			return head;
-		} else {
-			return min(head.left);
-		}
-	}
-	public Book max() {
-		return max(head).key;
-	}
-	public Node max(Node head) {
-		if (head.right == null) {
-			return head;
-		} else {
-			return max(head.right);
-		}
-	}
-	public Book floor(Book k) {
-		Node n = floor(head, k);
-		if (n == null) {
-			return null;
-		} else {
-			return n.key;
-		}
-	}
-	public Node floor(Node head, Book k) {
-		if (head == null) {
-			return null;
-		}
-		int i = k.compareTo(head.key);
-		if (i == 0) {
-			return head;
-		}
-		if (i < 0) {
-			return floor(head.left, k);
-		}
-		Node n = floor(head.right, k);
-		if (n != null) {
-			return n;
-		} else {
-			return head;
-		}
-	}
-	public Book ceil(Book k) {
-		Node n = ceil(head, k);
-		if (n == null) {
-			return null;
-		} else {
-			return n.key;
-		}
-	}
-	public Node ceil(Node head, Book k) {
-		if (head == null) {
-			return null;
-		}
-		int i = k.compareTo(head.key);
-		if (i == 0) {
-			return head;
-		}
-		if (i > 0) {
-			return ceil(head.right, k);
-		}
-		Node n = floor(head.left, k);
-		if (n != null) {
-			return n;
-		} else {
-			return head;
-		}
-	}
-	public Book select(int k) {
-		if (k < 0 || k >= size(head)) {
-			System.out.println("invalid");
-		}
-		Node n = select(head, k);
-		return n.key;
-	}
-	public Node select(Node head, int k) {
-		if (head == null) {
-			return null;
-		}
-		int i = size(head.left);
-		if (i > k) {
-			return select(head.left, k);
-		} else if (i < k) {
-			return select(head.right, k - i - 1);
-		} else {
-			return head;
-		}
-	}
-	public int rank(Book k) {
-		return rank(head, k);
-	}
-	public int rank(Node head, Book k) {
-		if (head == null) {
-			return 0;
-		}
-		int i = k.compareTo(head.key);
-		if (i < 0) {
-			return rank(head.left, k);
-		} else if (i > 0) {
-			return 1 + size(head.left) + rank(head.right, k);
-		} else {
-			return size(head.left);
-		}
-	}
-	public int size() {
-		return size(head);
-	}
-	public int size(Node head) {
-		if (head == null) {
-			return 0;
-		} else {
-			return head.count;
-		}
-	}
-	/**
-     * Removes the smallest key and associated value from the symbol table.
+/**
+ * Class for binary search tree.
+ * @param      <Key>     The key
+ * @param      <Value>  The values
+ */
+class BinarySearchTree<Key extends Comparable<Key>, Value> {
+    /**.
+     * starting element in the BST.
+     */
+    private Node root;
+    /**.
+     * Class for node.
+     */
+    class Node {
+        /**.
+         * Object of Book class with book details.
+         */
+        private Key key;
+        /**.
+         * value of the book in Book class
+         */
+        private Value value;
+        /**.
+         * Left and Right node of the BST
+         */
+        private Node left, right;
+        /**
+         * size.
+         */
+        private int size;
+        /**
+         * Constructs the object.
+         * @param      k     key.
+         * @param      v     value.
+         * @param      s     size.
+         */
+        Node(final Key k, final Value v, final int s) {
+            key = k;
+            value = v;
+            size = s;
+        }
+    }
+    /**
+     * Determines if empty.
+     * @return     True if empty, False otherwise.
+     * Time complexity for this method is O(1).
+     */
+    public boolean isEmpty() {
+        return size() == 0;
+    }
+    /**
+     * size method that returns the size.
+     * @return     size of type int.
+     * Time complexity for this method is O(1).
+     */
+    public int size() {
+        return size(root);
+    }
+    /**
+     * size method that returns the size.
+     * @param      x     Node.
+     * @return     size of type int.
+     * Time complexity for this method is O(1).
+     */
+    private int size(final Node x) {
+        if (x == null) {
+            return 0;
+        } else {
+            return x.size;
+        }
+    }
+    /**.
+     * This method is to add a key and value to BST.
+     * Time Complexity is O(N).
+     * because it calls another put method to add elements.
      *
-     * @throws NoSuchElementException if the symbol table is empty
+     * @param      key    The key
+     * @param      value  The value
+     */
+    public void put(final Key key, final Value value) {
+        if (key == null) {
+            return;
+        }
+        root = put(root, key, value);
+    }
+    /**.
+     * This method is to add element to BST
+     * Time Complexity is O(N) for worst case.
+     * element is added until it reaches to the
+     * position it should added at.
+     *
+     * @param      node   The node
+     * @param      key    The key
+     * @param      value  The value
+     *
+     * @return     returns node
+     */
+    public Node put(final Node node, final Key key,
+                    final Value value) {
+        if (node == null) {
+            return new Node(key, value, 1);
+        }
+        int cmp = key.compareTo(node.key);
+        if (cmp < 0) {
+            node.left = put(node.left, key, value);
+        } else if (cmp > 0) {
+            node.right = put(node.right, key, value);
+        } else {
+            node.value = value;
+        }
+        return node;
+    }
+    /**.
+     * This method is to return the value of that key
+     * Time Complexity is O(N)
+     *
+     * @param      key   The key
+     *
+     * @return     returns the value.
+     */
+    public Value get(final Key key) {
+        return get(root, key);
+    }
+    /**.
+     * This method is to return the value of that key
+     * Time Complexity is O(N)
+     *
+     * @param      node  the node where the book details and
+     *                   values.
+     * @param      key   The key
+     *
+     * @return     returns the value of that key.
+     */
+    private Value get(final Node node, final Key key) {
+        if (node == null) {
+            return null;
+        }
+        int cmp = key.compareTo(node.key);
+        if (cmp < 0) {
+            return get(node.left, key);
+        } else if (cmp > 0) {
+            return get(node.right, key);
+        } else {
+            return node.value;
+        }
+    }
+    /**
+     * min method that returns the minimum node.
+     * @return     Key of type Book.
+     * Time complexity for this method is O(N).
+     */
+    public Key min() {
+        return min(root).key;
+    }
+    /**
+     * min method that returns the minimum node.
+     * @param      x     Node.
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node min(final Node x) {
+        if (x.left == null) {
+            return x;
+        } else {
+            return min(x.left);
+        }
+    }
+    /**
+     * max method that returns the maximum node.
+     * @return     Key of type Book.
+     * Time complexity for this method is O(N).
+     */
+    public Key max() {
+        return max(root).key;
+    }
+    /**
+     * min method that returns the minimum node.
+     * @param      x     Node.
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node max(final Node x) {
+        if (x.right == null) {
+            return x;
+        } else {
+            return max(x.right);
+        }
+    }
+    /**
+     * floor method that returns the node less
+     * than given node.
+     * @param      key   The key
+     * @return     Key of type Book.
+     * Time complexity for this method is O(N).
+     */
+    public Key floor(final Key key) {
+        if (isEmpty()) {
+            return null;
+        }
+        Node x = floor(root, key);
+        if (x == null) {
+            return null;
+        } else {
+            return x.key;
+        }
+    }
+    /**
+     * floor method that returns the node less
+     * than given node.
+     * @param      x     Node.
+     * @param      key   The key
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node floor(final Node x, final Key key) {
+        if (x == null) {
+            return null;
+        }
+        int cmp = key.compareTo(x.key);
+        if (cmp == 0) {
+            return x;
+        }
+        if (cmp < 0) {
+            return floor(x.left, key);
+        }
+        Node t = floor(x.right, key);
+        if (t != null) {
+            return t;
+        } else {
+            return x;
+        }
+    }
+    /**
+     * ceiling method that returns the node greater
+     * than given node.
+     * @param      key   The key
+     * @return     Key of type Book.
+     * Time complexity for this method is O(N).
+     */
+    public Key ceiling(final Key key) {
+        if (isEmpty()) {
+            return null;
+        }
+        Node x = ceiling(root, key);
+        if (x == null) {
+            return null;
+        } else {
+            return x.key;
+        }
+    }
+    /**
+     * ceiling method that returns the node greater
+     * than given node.
+     * @param      x     Node.
+     * @param      key   The key
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node ceiling(final Node x, final Key key) {
+        if (x == null) {
+            return null;
+        }
+        int cmp = key.compareTo(x.key);
+        if (cmp == 0) {
+            return x;
+        }
+        if (cmp < 0) {
+            Node t = ceiling(x.left, key);
+            if (t != null) {
+                return t;
+            } else {
+                return x;
+            }
+        }
+        return ceiling(x.right, key);
+    }
+    /**
+     * select method that returns the node at particular index.
+     * @param      k     index.
+     * @return     Key of type Book.
+     * Time complexity for this method is O(N).
+     */
+    public Key select(final int k) {
+        Node x = select(root, k);
+        return x.key;
+    }
+    /**
+     * select method that returns the node at particular index.
+     * @param      x     Node.
+     * @param      k     index.
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node select(final Node x, final int k) {
+        if (x == null) {
+            return null;
+        }
+        int t = size(x.left);
+        if (t > k) {
+            return select(x.left, k);
+        } else if (t < k) {
+            return select(x.right, k - t - 1);
+        } else {
+            return x;
+        }
+    }
+    /**
+     * delete method that deletes the particular node.
+     * @param      key   The key
+     * Time complexity for this method is O(N).
+     */
+    public void delete(final Key key) {
+        root = delete(root, key);
+    }
+    /**
+     * delete method that deletes the particular node.
+     * @param      x     Node.
+     * @param      key   The key
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node delete(final Node x, final Key key) {
+        Node n = x;
+        if (n == null) {
+            return null;
+        }
+        int cmp = key.compareTo(n.key);
+        if (cmp < 0) {
+            n.left = delete(n.left, key);
+        } else if (cmp > 0) {
+            n.right = delete(n.right, key);
+        } else {
+            if (n.right == null) {
+                return n.left;
+            }
+            if (n.left == null) {
+                return n.right;
+            }
+            Node t = n;
+            n = min(t.right);
+            n.right = deleteMin(t.right);
+            n.left = t.left;
+        }
+        n.size = size(n.left) + size(n.right) + 1;
+        return n;
+    }
+    /**
+     * deleteMin method that deletes the minimum node.
+     * Time complexity for this method is O(N).
      */
     public void deleteMin() {
-        head = deleteMin(head);
+        root = deleteMin(root);
     }
-
-    private Node deleteMin(Node x) {
-        if (x.left == null) return x.right;
+    /**
+     * deleteMin method that deletes the minimum node.
+     * @param      x     Node.
+     * @return     Node.
+     * Time complexity for this method is O(N).
+     */
+    private Node deleteMin(final Node x) {
+        if (x.left == null) {
+            return x.right;
+        }
         x.left = deleteMin(x.left);
-        x.count = size(x.left) + size(x.right) + 1;
+        x.size = size(x.left) + size(x.right) + 1;
         return x;
     }
-
     /**
-     * Removes the largest key and associated value from the symbol table.
-     *
-     * @throws NoSuchElementException if the symbol table is empty
+     * deleteMax method that deletes the maximum node.
+     * Time complexity for this method is O(N).
      */
     public void deleteMax() {
-        head = deleteMax(head);
+        root = deleteMax(root);
     }
-
-    private Node deleteMax(Node x) {
-        if (x.right == null) return x.left;
-        x.right = deleteMax(x.right);
-        x.count = size(x.left) + size(x.right) + 1;
-        return x;
-    }
-
     /**
-     * Removes the specified key and its associated value from this symbol table     
-     * (if the key is in this symbol table).    
-     *
-     * @param  key the key
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * deleteMax method that deletes the maximum node.
+     * @param      x     Node.
+     * @return     Node.
+     * Time complexity for this method is O(N).
      */
-    public void delete(Book key) {
-        if (key == null) throw new IllegalArgumentException("calls delete() with a null key");
-        head = delete(head, key);
-    }
-
-    private Node delete(Node x, Book key) {
-        if (x == null) return null;
-
-        int cmp = key.compareTo(x.key);
-        if      (cmp < 0) x.left  = delete(x.left,  key);
-        else if (cmp > 0) x.right = delete(x.right, key);
-        else { 
-            if (x.right == null) return x.left;
-            if (x.left  == null) return x.right;
-            Node t = x;
-            x = min(t.right);
-            x.right = deleteMin(t.right);
-            x.left = t.left;
-        } 
-        x.count = size(x.left) + size(x.right) + 1;
+    private Node deleteMax(final Node x) {
+        if (x.right == null) {
+            return x.left;
+        }
+        x.right = deleteMax(x.right);
+        x.size = size(x.left) + size(x.right) + 1;
         return x;
-    } 
-
+    }
 }
