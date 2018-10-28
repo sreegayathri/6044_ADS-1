@@ -1,18 +1,5 @@
 Starting audit...
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:16:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:21: Line has trailing spaces. [RegexpSingleline]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:22: Line has trailing spaces. [RegexpSingleline]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:24: Expected @return tag. [JavadocMethod]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:28: Expected @return tag. [JavadocMethod]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:31:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:39:22: Parameter data should be final. [FinalParameters]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:41:15: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:57:25: Parameter data should be final. [FinalParameters]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:59:15: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:74: Expected @return tag. [JavadocMethod]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:81:19: ';' is preceded with whitespace. [NoWhitespaceBefore]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:83:9: '}' at column 9 should be alone on a line. [RightCurly]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:97:45: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 2 errors.

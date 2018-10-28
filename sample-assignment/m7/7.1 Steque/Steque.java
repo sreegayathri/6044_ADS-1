@@ -18,27 +18,33 @@ class Steque {
         rear = null;
         size = 0;
     }
-    /**.  
-     * Function to check if queue is empty 
-    */
+/**
+ * Determines if empty.
+ *
+ * @return     True if empty, False otherwise.
+ */
     public boolean isEmpty() {
         return (front == null);
     }
-    /**.  Function to get the size of the queue */
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
-	/**
-	 * Pushes at left.
-	 * Best case: O(1)
-	 * Worst case: O(1)
-	 * average case: O(1)
-	 *
-	 * @param      data  The data
-	 */
-    public void push(int data) {
+    /**
+     * Pushes at left.
+     * Best case: O(1)
+     * Worst case: O(1)
+     * average case: O(1)
+     *
+     * @param      data  The data
+     */
+    public void push(final int data) {
         Node npointer = new Node(data, null);
-        size++ ;
+        size++;
         if (front == null) {
             front = npointer;
             rear = front;
@@ -54,9 +60,9 @@ class Steque {
      * average case: O(1)
      * @param      data  The data
      */
-    public void enqueue(int data) {
+    public void enqueue(final int data) {
         Node npointer = new Node(data, null);
-        size++ ;
+        size++;
         if (rear == null) {
             rear = npointer;
             front = rear;
@@ -70,6 +76,7 @@ class Steque {
      * Best case: O(1)
      * Worst case: O(1)
      * average case: O(1)
+     * @return     { description_of_the_return_value }
      */
     public int pop() {
         if (!isEmpty()) {
@@ -78,9 +85,10 @@ class Steque {
             if (front == null) {
                 rear = null;
             }
-            size-- ;
+            size--;
             return pointer.getData();
-        } return -1;
+        }
+        return -1;
 
     }
     /**
@@ -94,7 +102,7 @@ class Steque {
         if (front != null) {
             String s = "";
             Node pointer = front;
-            while (pointer != rear.getLink() ) {
+            while (pointer != rear.getLink()) {
                 s += pointer.getData() + ", ";
                 pointer = pointer.getLink();
             }
