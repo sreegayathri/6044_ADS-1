@@ -30,7 +30,8 @@ class Solution{
                 case "toString":
                     h.toString();
                     break;
-                default: break;
+                default:
+                break;
             }
         }
     }
