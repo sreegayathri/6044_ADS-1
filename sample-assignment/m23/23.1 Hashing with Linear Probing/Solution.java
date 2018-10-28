@@ -2,11 +2,11 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution{
+public final class Solution {
     /**
      * Constructs the h.
      */
-    Solution(){ }
+    Solution() { }
     /**
      * { function_description }.
      *
@@ -14,10 +14,11 @@ class Solution{
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        LinearProbingHashST<String, Integer> h = new LinearProbingHashST<String, Integer>();
-        while(scan.hasNext()){
+        LinearProbingHashST<String, Integer> h = new
+            LinearProbingHashST<String, Integer>();
+        while (scan.hasNext()){
             String[] tokens = scan.nextLine().split(" ");
-            switch(tokens[0]) {
+            switch (tokens[0]) {
                 case "put":
                     h.put(tokens[1], Integer.parseInt(tokens[2]));
                     break;
