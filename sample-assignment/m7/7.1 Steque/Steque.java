@@ -28,7 +28,14 @@ class Steque {
     public int size() {
         return size;
     }
-
+	/**
+	 * Pushes at left.
+	 * Best case: O(1)
+	 * Worst case: O(1)
+	 * average case: O(1)
+	 *
+	 * @param      data  The data
+	 */
     public void push(int data) {
         Node npointer = new Node(data, null);
         size++ ;
@@ -40,6 +47,13 @@ class Steque {
             front = npointer;
         }
     }
+    /**
+     * Pushes at right.
+     * Best case: O(1)
+     * Worst case: O(1)
+     * average case: O(1)
+     * @param      data  The data
+     */
     public void enqueue(int data) {
         Node npointer = new Node(data, null);
         size++ ;
@@ -51,6 +65,12 @@ class Steque {
             rear = npointer;
         }
     }
+    /**.
+     * pops left.
+     * Best case: O(1)
+     * Worst case: O(1)
+     * average case: O(1)
+     */
     public int pop() {
         if (!isEmpty()) {
             Node pointer = front;
@@ -63,6 +83,13 @@ class Steque {
         } return -1;
 
     }
+    /**
+     * prints.
+     * Best case: O(1)
+     * Worst case: O(n)
+     * average case: O(n)
+     */
+
     public void show() {
         if (front != null) {
             String s = "";
