@@ -25,8 +25,8 @@ public class LinearProbingHashST<Key, Value> {
      * @param capacity the initial capacity
      */
     public LinearProbingHashST(int capacity) {
-        m = capacity;
-        n = 0;
+        m = capacity;//length
+        n = 0;//no. of key value pairs
         keys = (Key[]) new Object[m];
         vals = (Value[]) new Object[m];
     }
@@ -204,5 +204,17 @@ public class LinearProbingHashST<Key, Value> {
             }
         }
         return true;
+    }
+    public void display(){
+        String str = "{";
+        if(n == 0){
+            System.out.println("{}");
+            return;
+        }
+        for(Key s : keys()) {
+            str += s + ":" + get(s) + ", ";
+        }
+        String str1 = str.substring(0, str.length() - 2) + "}";
+        System.out.println(str1);
     }
 }

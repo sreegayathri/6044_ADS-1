@@ -28,8 +28,8 @@ public final class Solution {
                 case "delete":
                     h.delete(tokens[1]);
                     break;
-                case "toString":
-                    h.toString();
+                case "display":
+                    h.display();
                     break;
                 default:
                 break;
