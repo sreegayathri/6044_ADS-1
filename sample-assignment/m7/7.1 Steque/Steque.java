@@ -5,11 +5,11 @@ class Steque {
     /**
      * { Nodes front and rear }.
      */
-    protected Node front, rear;
+    private Node front, rear;
     /**
      * size.
      */
-    public int size;
+    private int size;
 /**
  * Constructs the object.
  */

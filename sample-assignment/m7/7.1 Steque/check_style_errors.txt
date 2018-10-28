@@ -1,8 +1,5 @@
 Starting audit...
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:8:20: Variable 'front' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:8:27: Variable 'rear' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:12:16: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:16:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:21: Line has trailing spaces. [RegexpSingleline]
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:22: Line has trailing spaces. [RegexpSingleline]
@@ -18,4 +15,4 @@ Starting audit...
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:83:9: '}' at column 9 should be alone on a line. [RightCurly]
 [ERROR] G:\6044_ADS-1\sample-assignment\m7\7.1 Steque\Steque.java:97:45: ')' is preceded with whitespace. [ParenPad]
 Audit done.
-Checkstyle ends with 18 errors.
+Checkstyle ends with 15 errors.
