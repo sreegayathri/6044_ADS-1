@@ -1,4 +1,3 @@
-import java.lang.IllegalArgumentException;
 /**.
  * Class for linear probing hash st.
  *
@@ -6,12 +5,28 @@ import java.lang.IllegalArgumentException;
  * @param      <Value>  The value
  */
 public class LinearProbingHashST<Key, Value> {
+    /**.
+     * capacity of int type
+     */
     private static final int INIT_CAPACITY = 4;
+    /**.
+     * n number of key value pairs of int type 
+     */
+    private int n;
+    /**.
+     * m of int type size of hash table
+     */
+    private int m;
+    /**.
+     * keys of Key array
+     */
+    private Key[] keys;
+    /**
+     * values of Value type
+     */
+    private Value[] vals;
 
-    private int n;           // number of key-value pairs in the symbol table
-    private int m;           // size of linear probing table
-    private Key[] keys;      // the keys
-    private Value[] vals;    // the values
+
     /**
      * Initializes an empty symbol table.
      */
@@ -25,50 +40,47 @@ public class LinearProbingHashST<Key, Value> {
      * @param capacity the initial capacity
      */
     public LinearProbingHashST(int capacity) {
-        m = capacity;//length
-        n = 0;//no. of key value pairs
-        keys = (Key[]) new Object[m];
+        m = capacity;
+        n = 0;
+        keys = (Key[])   new Object[m];
         vals = (Value[]) new Object[m];
     }
 
     /**
      * Returns the number of key-value pairs in this symbol table.
-     *
+     * Time complexity is constant because each statement is executed only once.
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
         return n;
     }
-
     /**
-     * Returns true if this symbol table is empty.
+     * hash funciton
+     * Time complexity is constant because each statement is executed only once.
+     * @param      key   The key
      *
-     * @return {@code true} if this symbol table is empty;
-     *         {@code false} otherwise
+     * @return     {hash number of int tuype }
      */
-    public boolean isEmpty() {
-        return size() == 0;
+    private int hash(Key key) {
+        return (key.hashCode() * 11) % m;
     }
-
     /**
-     * Returns true if this symbol table contains the specified key.
+     * check if the key contains or not
+     * Time complexity is constant because each statement is executed only once.
+     * @param      key   The key
      *
-     * @param  key the key
-     * @return {@code true} if this symbol table contains {@code key};
-     *         {@code false} otherwise
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @return     { returns true if key contained else false}
      */
     public boolean contains(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         return get(key) != null;
     }
 
-    // hash function for keys - returns value between 0 and M-1
-    private int hash(Key key) {
-        return (key.hashCode() & 0x7fffffff) % m;
-    }
-
-    // resizes the hash table to the given capacity by re-hashing all of the keys
+    /**
+     * resizes the array
+     * Time complexity is N because loop iterates till end.
+     * @param      capacity  The capacity
+     */
     private void resize(int capacity) {
         LinearProbingHashST<Key, Value> temp = new LinearProbingHashST<Key, Value>(capacity);
         for (int i = 0; i < m; i++) {
@@ -78,18 +90,13 @@ public class LinearProbingHashST<Key, Value> {
         }
         keys = temp.keys;
         vals = temp.vals;
-        m = temp.m;
+        m    = temp.m;
     }
-
     /**
-     * Inserts the specified key-value pair into the symbol table, overwriting the old 
-     * value with the new value if the symbol table already contains the specified key.
-     * Deletes the specified key (and its associated value) from this symbol table
-     * if the specified value is {@code null}.
-     *
-     * @param  key the key
-     * @param  val the value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * Inserts the specified key-value pair into the symbol table, overwriting the old
+     * Time complexity is N because loop iterates till end.
+     * @param      key   The key
+     * @param      val   The value
      */
     public void put(Key key, Value val) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
@@ -100,7 +107,7 @@ public class LinearProbingHashST<Key, Value> {
         }
 
         // double table size if 50% full
-        if (n >= m/2) resize(2*m);
+        if (n >= m / 2) resize(2 * m);
 
         int i;
         for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
@@ -113,13 +120,12 @@ public class LinearProbingHashST<Key, Value> {
         vals[i] = val;
         n++;
     }
-
     /**
      * Returns the value associated with the specified key.
-     * @param key the key
-     * @return the value associated with {@code key};
-     *         {@code null} if no such value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * Time complexity is N because loop iterates till end.
+     * @param      key   The key
+     *
+     * @return     {gets value of Key of value type }
      */
     public Value get(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
@@ -128,13 +134,10 @@ public class LinearProbingHashST<Key, Value> {
                 return vals[i];
         return null;
     }
-
     /**
-     * Removes the specified key and its associated value from this symbol table     
-     * (if the key is in this symbol table).    
-     *
-     * @param  key the key
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * Removes the specified key and its associated value from this symbol table
+     * Time complexity is N because loop iterates till end.
+     * @param      key   The key
      */
     public void delete(Key key) {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null");
@@ -154,7 +157,7 @@ public class LinearProbingHashST<Key, Value> {
         i = (i + 1) % m;
         while (keys[i] != null) {
             // delete keys[i] an vals[i] and reinsert
-            Key keyToRehash = keys[i];
+            Key   keyToRehash = keys[i];
             Value valToRehash = vals[i];
             keys[i] = null;
             vals[i] = null;
@@ -166,55 +169,26 @@ public class LinearProbingHashST<Key, Value> {
         n--;
 
         // halves size of array if it's 12.5% full or less
-        if (n > 0 && n <= m/8) resize(m/2);
-
-        assert check();
+        if (n > 0 && n <= m / 8) resize(m / 2);
     }
-
     /**
-     * Returns all keys in this symbol table as an {@code Iterable}.
-     * To iterate over all of the keys in the symbol table named {@code st},
-     * use the foreach notation: {@code for (Key key : st.keys())}.
-     *
-     * @return all keys in this symbol table
+     * displays the hash table in dictonary format
+     * TIme complexity is N because the for loop iterates till the size of hashtable.
      */
-    public Iterable<Key> keys() {
-        Queue<Key> queue = new Queue<Key>();
-        for (int i = 0; i < m; i++)
-            if (keys[i] != null) queue.enqueue(keys[i]);
-        return queue;
-    }
-
-    // integrity check - don't check after each put() because
-    // integrity not maintained during a delete()
-    private boolean check() {
-
-        // check that hash table is at most 50% full
-        if (m < 2*n) {
-            System.err.println("Hash table size m = " + m + "; array size n = " + n);
-            return false;
-        }
-
-        // check that each key in table can be found by get()
-        for (int i = 0; i < m; i++) {
-            if (keys[i] == null) continue;
-            else if (get(keys[i]) != vals[i]) {
-                System.err.println("get[" + keys[i] + "] = " + get(keys[i]) + "; vals[i] = " + vals[i]);
-                return false;
-            }
-        }
-        return true;
-    }
-    public void display(){
-        String str = "{";
-        if(n == 0){
+     public void display() {
+        if(size() == 0) {
             System.out.println("{}");
             return;
         }
-        for(Key s : keys()) {
-            str += s + ":" + get(s) + ", ";
+        String str = "{";
+        for(int i=0; i<keys.length;i++) {
+            if(keys[i] != null) {
+                str += keys[i] + ":" + vals[i] + ", ";
+            }
         }
-        String str1 = str.substring(0, str.length() - 2) + "}";
-        System.out.println(str1);
+        str = str.substring(0, str.length()-2);
+        str += "}";
+        System.out.println(str);
     }
+
 }
