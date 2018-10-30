@@ -9,7 +9,6 @@ public final class Solution {
     /**.
      * Constructs the object for solution class
      * @author sreegayathri.
-     * 
      */
     private Solution() {
 
