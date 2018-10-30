@@ -106,22 +106,22 @@ class Team implements Comparable<Team> {
      * @return     { returns -1 if condition is satisfied }
      */
     public int compareTo(Team that) {
-        if(this.wins > that.wins) {
+        if (this.wins > that.wins) {
             return -1;
         }
-        if(this.wins < that.wins) {
+        if (this.wins < that.wins) {
             return 1;
         }
-        if(this.losses < that.losses) {
+        if (this.losses < that.losses) {
             return -1;
         }
-        if(this.losses > that.losses) {
+        if (this.losses > that.losses) {
             return 1;
         }
-        if(this.draws > that.draws) {
+        if (this.draws > that.draws) {
             return -1;
         }
-        if(this.draws < that.draws) {
+        if (this.draws < that.draws) {
             return 1;
         }
         return 0;
