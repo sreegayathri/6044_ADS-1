@@ -1,77 +1,44 @@
-<<<<<<< HEAD
+/**.
+ * imports the Scanner package
+ */
 import java.util.Scanner;
 /**.
- * solution.
+ * class for Solution
  */
-final class Solution {
-    /**
-     * Constructs the object.
+public final class Solution {
+    /**.
+     * Constructs the object for solution class
+     * @author sreegayathri.
+     * 
      */
     private Solution() {
-        //function.
+
     }
-    /**
-     * main.
+    /**.
+     * main method to demonstrate the Binary Search Tree
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         BinarySearchTree bst = new BinarySearchTree();
-        while (scan.hasNextLine()) {
+        while (scan.hasNext()) {
             String[] tokens = scan.nextLine().split(",");
             switch (tokens[0]) {
             case "put":
-                bst.put(new Book(tokens[1], tokens[2],
-                 Double.parseDouble(tokens[2 + 1])),
-                  Integer.parseInt(tokens[2 + 2]));
+                Book book = new Book(tokens[1], tokens[1 + 1],
+                                     Double.parseDouble(tokens[2 + 1]));
+                bst.put(book, tokens[2 + 2]);
                 break;
             case "get":
-                System.out.println(bst.get(new Book(tokens[1],
-                 tokens[2], Double.parseDouble(tokens[2 + 1]))));
+                book = new Book(tokens[1], tokens[1 + 1],
+                                Double.parseDouble(tokens[2 + 1]));
+                System.out.println(bst.get(book));
                 break;
             default:
                 break;
             }
         }
+
     }
 }
-=======
-import java.util.Scanner;
-/**.
- * solution.
- */
-final class Solution {
-    /**
-     * Constructs the object.
-     */
-    private Solution() {
-        //function.
-    }
-    /**
-     * main.
-     *
-     * @param      args  The arguments
-     */
-    public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        BinarySearchTree bst = new BinarySearchTree();
-        while (scan.hasNextLine()) {
-            String[] tokens = scan.nextLine().split(",");
-            switch (tokens[0]) {
-            case "put":
-                bst.put(new Book(tokens[1], tokens[2],
-                 Double.parseDouble(tokens[2 + 1])),
-                  Integer.parseInt(tokens[2 + 2]));
-                break;
-            case "get":
-                System.out.println(bst.get(new Book(tokens[1],
-                 tokens[2], Double.parseDouble(tokens[2 + 1]))));
-                break;
-            default:
-                break;
-            }
-        }
-    }
-}
->>>>>>> aad999d34dd3fdaa0f6842661f0b26239fbae5fa

@@ -1,73 +1,67 @@
-<<<<<<< HEAD
 /**.
- * Class for binary search tree.
+ * Class for BinarySearchTree.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
  */
-class BinarySearchTree {
-    /**.
-     * Class for node.
-     */
-    class Node {
-        /**.
-         * key.
-         */
-        private Book key;
-        /**.
-         * value.
-         */
-        private Integer value;
-        /**.
-         * left.
-         */
-        private Node left;
-        /**.
-         * right.
-         */
-        private Node right;
-        /**.
-         * Constructs the object.
-         *
-         * @param      key     { parameter_description }
-         * @param      value     { parameter_description }
-         */
-        Node(final Book key, final Integer value) {
-            this.key = key;
-            this.value = value;
-            this.left = null;
-            this.right = null;
-        }
-    }
-    /**.
-     * root.
+public class BinarySearchTree <Key extends Comparable <Key>, Value> {
+    /**
+     * Node type 
      */
     private Node root;
     /**.
-     * Constructs the object.
+     * Class for node.
      */
-    BinarySearchTree() {
-        root = null;
+    private class Node {
+        /**.
+         * key of Book type
+         */
+        private Book key;
+        /**
+         * value of string type
+         */
+        private String value;
+        /**
+         * left of Node type
+         */
+        private Node left;
+        /**
+         * right of Node type
+         */
+        private Node right;
+        /**
+         * Constructs the object for Node class
+         *
+         * @param      key    The key
+         * @param      value  The value
+         */
+        public  Node(Book key, String value) {
+            this.key = key;
+            this.value = value;
+
+        }
     }
-    /**.
-     * put.
+    /**
+     * puts the value and key into BinarySearchTree
      *
      * @param      key    The key
      * @param      value  The value
      */
-    public void put(final Book key, final Integer value) {
+    public void put(Book key, String value) {
         root = put(root, key, value);
     }
-    /**.
-     * putmethod.
+    /**
+     * over rides the put function
      *
-     * @param      x      { parameter_description }
+     * @param      x      { Node }
      * @param      key    The key
      * @param      value  The value
-     *
-     * @return     { description_of_the_return_value }
+     * Time complexity is N as it is a recursive function
+     * A recursive function is called N times until break condition is staisfied.
+     * @return     { returns the value if the given conditions are not satisfied else return the node }
      */
-    private Node put(final Node x, final Book key, final Integer value) {
-        if (x == null) {
-            return new Node(key, value);
-        }
+    public Node put(Node x, Book key, String value ) {
+        if (x == null) return new Node(key, value);
         int cmp = key.compareTo(x.key);
         if (cmp < 0) {
             x.left = put(x.left, key, value);
@@ -76,147 +70,26 @@ class BinarySearchTree {
         } else {
             x.value = value;
         }
+
         return x;
     }
-    /**.
-     * get method.
-     *
-     * @param      key   The key
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Integer get(final Book key) {
-        return get(root, key);
-    }
     /**
-     * getmethod.
-     *
-     * @param      x     { parameter_description }
+     * get the value of the given 
+     * if there no key it returns null
      * @param      key   The key
-     *
-     * @return     { description_of_the_return_value }
+     * Time complexity is N as the while iterates till null value of key is found
+     * @return     { returns the value of String type }
      */
-    private Integer get(final Node x, final Book key) {
-        if (x == null) {
-            return null;
+    public String get(Book key) {
+        Node x = root;
+        while (x != null) {
+            int cmp = key.compareTo(x.key);
+            if(cmp < 0)  x =x.left;
+            else if(cmp>0)    x=x.right;
+            else return x.value;
+
         }
-        int cmp = key.compareTo(x.key);
-        if (cmp < 0) {
-            return get(x.left, key);
-        } else if (cmp > 0) {
-            return get(x.right, key);
-        }
-        return x.value;
+        return null;
     }
-=======
-/**.
- * Class for binary search tree.
- */
-class BinarySearchTree {
-    /**.
-     * Class for node.
-     */
-    class Node {
-        /**.
-         * key.
-         */
-        private Book key;
-        /**.
-         * value.
-         */
-        private Integer value;
-        /**.
-         * left.
-         */
-        private Node left;
-        /**.
-         * right.
-         */
-        private Node right;
-        /**.
-         * Constructs the object.
-         *
-         * @param      key     { parameter_description }
-         * @param      value     { parameter_description }
-         */
-        Node(final Book key, final Integer value) {
-            this.key = key;
-            this.value = value;
-            this.left = null;
-            this.right = null;
-        }
-    }
-    /**.
-     * root.
-     */
-    private Node root;
-    /**.
-     * Constructs the object.
-     */
-    BinarySearchTree() {
-        root = null;
-    }
-    /**.
-     * put.
-     *
-     * @param      key    The key
-     * @param      value  The value
-     */
-    public void put(final Book key, final Integer value) {
-        root = put(root, key, value);
-    }
-    /**.
-     * putmethod.
-     *
-     * @param      x      { parameter_description }
-     * @param      key    The key
-     * @param      value  The value
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private Node put(final Node x, final Book key, final Integer value) {
-        if (x == null) {
-            return new Node(key, value);
-        }
-        int cmp = key.compareTo(x.key);
-        if (cmp < 0) {
-            x.left = put(x.left, key, value);
-        } else if (cmp > 0) {
-            x.right = put(x.right, key, value);
-        } else {
-            x.value = value;
-        }
-        return x;
-    }
-    /**.
-     * get method.
-     *
-     * @param      key   The key
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public Integer get(final Book key) {
-        return get(root, key);
-    }
-    /**
-     * getmethod.
-     *
-     * @param      x     { parameter_description }
-     * @param      key   The key
-     *
-     * @return     { description_of_the_return_value }
-     */
-    private Integer get(final Node x, final Book key) {
-        if (x == null) {
-            return null;
-        }
-        int cmp = key.compareTo(x.key);
-        if (cmp < 0) {
-            return get(x.left, key);
-        } else if (cmp > 0) {
-            return get(x.right, key);
-        }
-        return x.value;
-    }
->>>>>>> aad999d34dd3fdaa0f6842661f0b26239fbae5fa
+
 }
