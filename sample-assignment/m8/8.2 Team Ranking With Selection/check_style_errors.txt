@@ -5,14 +5,6 @@ Starting audit...
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:6:9: Variable 'wins' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:6:15: Variable 'losses' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:6:23: Variable 'draws' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:10: Parameter teamname should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:17: 'teamname' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:27: Parameter wins should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:31: 'wins' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:37: Parameter losses should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:41: 'losses' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:49: Parameter draws should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:53: 'draws' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:91:28: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 7 errors.
