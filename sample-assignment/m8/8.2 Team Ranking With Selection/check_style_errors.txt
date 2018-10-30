@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:8:12: Variable 'teamname' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:12:9: Variable 'wins' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:12:15: Variable 'losses' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:12:23: Variable 'draws' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:21: Line is longer than 80 characters (found 83). [LineLength]
 Audit done.
-Checkstyle ends with 5 errors.

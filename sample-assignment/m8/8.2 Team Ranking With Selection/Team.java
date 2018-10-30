@@ -5,11 +5,11 @@ class Team implements Comparable<Team> {
     /**.
      * { var_description }
      */
-    String teamname;
+    private String teamname;
     /**.
      * { item_description }
      */
-    int wins, losses, draws;
+    private int wins, losses, draws;
     /**.
      * Constructs the object for team.
      *
@@ -18,7 +18,8 @@ class Team implements Comparable<Team> {
      * @param      loss1    The losses
      * @param      draws1     The draws
      */
-    Team(final String tname1, final int wins1, final int loss1, final int draws1) {
+    Team(final String tname1, final int wins1,
+            final int loss1, final int draws1) {
         this.teamname = tname1;
         this.wins = wins1;
         this.losses = loss1;
