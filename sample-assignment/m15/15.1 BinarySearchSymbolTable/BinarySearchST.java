@@ -1,14 +1,29 @@
-import java.util.NoSuchElementException;
 /**
+ * imports exception no such element
+ */
+import java.util.NoSuchElementException;
+/**.
  * Class for binary search st.
  *
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
+    /**.
+     * capcity of array
+     */
     private static final int INIT_CAPACITY = 2;
+    /**
+     * keys of Key array
+     */
     private Key[] keys;
+    /**
+     * vals of type Value[]
+     */
     private Value[] vals;
+    /**
+     * n of integer type
+     */
     private int n = 0;
 
     /**
@@ -22,12 +37,16 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * Initializes an empty symbol table with the specified initial capacity.
      * @param capacity the maximum capacity
      */
-    public BinarySearchST(int capacity) { 
-        keys = (Key[]) new Comparable[capacity]; 
-        vals = (Value[]) new Object[capacity]; 
-    }   
+    public BinarySearchST(int capacity) {
+        keys = (Key[]) new Comparable[capacity];
+        vals = (Value[]) new Object[capacity];
+    }
 
-    // resize the underlying arrays
+    /**
+     * resizes the keys and values array
+     * Time complexity is N as loop iterates for N times
+     * @param      capacity  of integer type
+     */
     private void resize(int capacity) {
         assert capacity >= n;
         Key[]   tempk = (Key[])   new Comparable[capacity];
@@ -42,7 +61,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns the number of key-value pairs in this symbol table.
-     *
+     * Time complexity is constant as each statement is executed only once.
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
@@ -51,7 +70,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns true if this symbol table is empty.
-     *
+     * Time complexity is constant as each statement is executed only once.
      * @return {@code true} if this symbol table is empty;
      *         {@code false} otherwise
      */
@@ -62,7 +81,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     /**
      * Does this symbol table contain the given key?
-     *
+     * Time complexu=ity is constant as each statement is executed only once
      * @param  key the key
      * @return {@code true} if this symbol table contains {@code key} and
      *         {@code false} otherwise
@@ -72,58 +91,48 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         return get(key) != null;
     }
-
     /**
-     * Returns the value associated with the given key in this symbol table.
+     * gets the value of the given key
+     * Time complexity is constant as ecahc statement is executed only once
+     * @param      key   The key
      *
-     * @param  key the key
-     * @return the value associated with the given key if the key is in the symbol table
-     *         and {@code null} if the key is not in the symbol table
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @return     { key if it there else it returns nuyll}
      */
     public Value get(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to get() is null"); 
+        if (key == null) throw new IllegalArgumentException("argument to get() is null");
         if (isEmpty()) return null;
-        int i = rank(key); 
+        int i = rank(key);
         if (i < n && keys[i].compareTo(key) == 0) return vals[i];
         return null;
-    } 
-
+    }
     /**
-     * Returns the number of keys in this symbol table strictly less than {@code key}.
+     * gets the rank of the key
+     * Time complexity is logN as we are using binary search mehtod
+     * @param      key   The key
      *
-     * @param  key the key
-     * @return the number of keys in the symbol table strictly less than {@code key}
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * @return     { rank of int type }
      */
     public int rank(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to rank() is null"); 
+        if (key == null) throw new IllegalArgumentException("argument to rank() is null");
 
-        int lo = 0, hi = n-1; 
-        while (lo <= hi) { 
-            int mid = lo + (hi - lo) / 2; 
+        int lo = 0, hi = n - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
             int cmp = key.compareTo(keys[mid]);
-            if      (cmp < 0) hi = mid - 1; 
-            else if (cmp > 0) lo = mid + 1; 
-            else return mid; 
-        } 
+            if      (cmp < 0) hi = mid - 1;
+            else if (cmp > 0) lo = mid + 1;
+            else return mid;
+        }
         return lo;
-    } 
-
-
-
+    }
     /**
-     * Inserts the specified key-value pair into the symbol table, overwriting the old 
-     * value with the new value if the symbol table already contains the specified key.
-     * Deletes the specified key (and its associated value) from this symbol table
-     * if the specified value is {@code null}.
-     *
-     * @param  key the key
-     * @param  val the value
-     * @throws IllegalArgumentException if {@code key} is {@code null}
+     * put the key value pair in symbol table.
+     * Time complexity is N as the for loop iterates till the end
+     * @param      key   The key
+     * @param      val   The value
      */
     public void put(Key key, Value val)  {
-        if (key == null) throw new IllegalArgumentException("first argument to put() is null"); 
+        if (key == null) throw new IllegalArgumentException("first argument to put() is null");
 
         if (val == null) {
             delete(key);
@@ -139,28 +148,29 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         }
 
         // insert new key-value pair
-        if (n == keys.length) resize(2*keys.length);
+        if (n == keys.length) resize(2 * keys.length);
 
         for (int j = n; j > i; j--)  {
-            keys[j] = keys[j-1];
-            vals[j] = vals[j-1];
+            keys[j] = keys[j - 1];
+            vals[j] = vals[j - 1];
         }
         keys[i] = key;
         vals[i] = val;
         n++;
 
         assert check();
-    } 
+    }
 
     /**
      * Removes the specified key and associated value from this symbol table
      * (if the key is in the symbol table).
+     * Time complexity is N as it need to search for the key as delet it
      *
      * @param  key the key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public void delete(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to delete() is null"); 
+        if (key == null) throw new IllegalArgumentException("argument to delete() is null");
         if (isEmpty()) return;
 
         // compute rank
@@ -171,9 +181,9 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
             return;
         }
 
-        for (int j = i; j < n-1; j++)  {
-            keys[j] = keys[j+1];
-            vals[j] = vals[j+1];
+        for (int j = i; j < n - 1; j++)  {
+            keys[j] = keys[j + 1];
+            vals[j] = vals[j + 1];
         }
 
         n--;
@@ -181,14 +191,14 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         vals[n] = null;
 
         // resize if 1/4 full
-        if (n > 0 && n == keys.length/4) resize(keys.length/2);
+        if (n > 0 && n == keys.length / 4) resize(keys.length / 2);
 
         assert check();
-    } 
+    }
 
     /**
      * Removes the smallest key and associated value from this symbol table.
-     *
+     * Time complexity is constant as each statement is executed only once.
      * @throws NoSuchElementException if the symbol table is empty
      */
     public void deleteMin() {
@@ -198,7 +208,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     /**
      * Removes the largest key and associated value from this symbol table.
-     *
+     * Time complexity is constant as each statement is executed only once.
      * @throws NoSuchElementException if the symbol table is empty
      */
     public void deleteMax() {
@@ -206,26 +216,31 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         delete(max());
     }
 
-   /**
-     * Returns the smallest key in this symbol table.
-     *
-     * @return the smallest key in this symbol table
-     * @throws NoSuchElementException if this symbol table is empty
-     */
+
+    /***************************************************************************
+     *  Ordered symbol table methods.
+     ***************************************************************************/
+
+    /**
+      * Returns the smallest key in this symbol table.
+      * Time complexity is constant as each statement is executed only once.
+      * @return the smallest key in this symbol table
+      * @throws NoSuchElementException if this symbol table is empty
+      */
     public Key min() {
         if (isEmpty()) throw new NoSuchElementException("called min() with empty symbol table");
-        return keys[0]; 
+        return keys[0];
     }
 
     /**
      * Returns the largest key in this symbol table.
-     *
+     * Time complexity is constant as each statement is executed only once.
      * @return the largest key in this symbol table
      * @throws NoSuchElementException if this symbol table is empty
      */
     public Key max() {
         if (isEmpty()) throw new NoSuchElementException("called max() with empty symbol table");
-        return keys[n-1];
+        return keys[n - 1];
     }
 
     /**
@@ -245,81 +260,93 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns the largest key in this symbol table less than or equal to {@code key}.
-     *
+     * Time complexity is logN as it utilises rank function
      * @param  key the key
      * @return the largest key in this symbol table less than or equal to {@code key}
      * @throws NoSuchElementException if there is no such key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public Key floor(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to floor() is null"); 
+        if (key == null) throw new IllegalArgumentException("argument to floor() is null");
         int i = rank(key);
         if (i < n && key.compareTo(keys[i]) == 0) return keys[i];
         if (i == 0) return null;
-        else return keys[i-1];
+        else return keys[i - 1];
     }
 
     /**
      * Returns the smallest key in this symbol table greater than or equal to {@code key}.
-     *
+     * Time complexity is logN as it utilises rank function
      * @param  key the key
      * @return the smallest key in this symbol table greater than or equal to {@code key}
      * @throws NoSuchElementException if there is no such key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public Key ceiling(Key key) {
-        if (key == null) throw new IllegalArgumentException("argument to ceiling() is null"); 
+        if (key == null) throw new IllegalArgumentException("argument to ceiling() is null");
         int i = rank(key);
-        if (i == n) return null; 
+        if (i == n) return null;
         else return keys[i];
     }
 
     /**
      * Returns the number of keys in this symbol table in the specified range.
-     *
+     * Time complexity is constant as each statemnt is executed only once.
      * @param lo minimum endpoint
      * @param hi maximum endpoint
-     * @return the number of keys in this symbol table between {@code lo} 
+     * @return the number of keys in this symbol table between {@code lo}
      *         (inclusive) and {@code hi} (inclusive)
      * @throws IllegalArgumentException if either {@code lo} or {@code hi}
      *         is {@code null}
      */
     public int size(Key lo, Key hi) {
-        if (lo == null) throw new IllegalArgumentException("first argument to size() is null"); 
-        if (hi == null) throw new IllegalArgumentException("second argument to size() is null"); 
+        if (lo == null) throw new IllegalArgumentException("first argument to size() is null");
+        if (hi == null) throw new IllegalArgumentException("second argument to size() is null");
 
         if (lo.compareTo(hi) > 0) return 0;
         if (contains(hi)) return rank(hi) - rank(lo) + 1;
         else              return rank(hi) - rank(lo);
     }
-
     /**
-     * Returns all keys in this symbol table as an {@code Iterable}.
-     * To iterate over all of the keys in the symbol table named {@code st},
-     * use the foreach notation: {@code for (Key key : st.keys())}.
-     *
-     * @return all keys in this symbol table
+     * Returns a string representation of the object.
+     * TIme complexity is N as the for loop irates for size of array.
+     * @return     String representation of the object.
      */
-    public void keys() {
-        for (int i = 0; i < n; i++) {
-            if (vals[i] != null) {
-                System.out.println(keys[i] + " " + vals[i]);
-            }
-        }
-    }
+    public String toString() {
+        String str = "";
+        int i;
+        for (i = 0; i < size() - 1; i++) {
+            str = str + keys[i] + " " + vals[i] + "\n";
 
+        }
+        str = str + keys[i] + " " +vals[i];
+        return str;
+
+    }
+    /**
+     * checks functions is sorted and rankCheck
+     * Time complexity is constant as each statement is executed once.
+     * @return     { description_of_the_return_value }
+     */
     private boolean check() {
         return isSorted() && rankCheck();
     }
-
-    // are the items in the array in ascending order?
+    /**
+     * Determines if sorted.
+     * Time complexity is constant as each statement is executed once.
+     * @return     True if sorted, False otherwise.
+     */
     private boolean isSorted() {
         for (int i = 1; i < size(); i++)
-            if (keys[i].compareTo(keys[i-1]) < 0) return false;
+            if (keys[i].compareTo(keys[i - 1]) < 0) return false;
         return true;
     }
 
-    // check that rank(select(i)) = i
+    /**
+     * checks the Rank function.
+     *Time complexity is N as for loop iterates till the size of array.
+     * @return     { description_of_the_return_value }
+     */
     private boolean rankCheck() {
         for (int i = 0; i < size(); i++)
             if (i != rank(select(i))) return false;
