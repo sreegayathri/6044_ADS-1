@@ -1,0 +1,18 @@
+warning: LF will be replaced by CRLF in sample-assignment/m13/13.1 isMinHeap/testcases/input001.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-assignment/m13/13.1 isMinHeap/testcases/input002.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-assignment/m13/13.1 isMinHeap/testcases/input003.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-assignment/m13/13.1 isMinHeap/testcases/input004.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-assignment/m13/13.1 isMinHeap/testcases/input005.txt.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-assignment/m13/13.1 isMinHeap/testcases/problem_id.txt.
+The file will have its original line endings in your working directory.
+[master face004] "ads1_m13_a1: 5/5 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 7 files changed, 111 deletions(-)
+ delete mode 100644 sample-assignment/m13/13.1 isMinHeap/md5/score.txt
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/sreegayathri/6044_ADS-1.git
+   dcc8e32..face004  master -> master
