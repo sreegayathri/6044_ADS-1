@@ -126,5 +126,4 @@ class Team implements Comparable<Team> {
         }
         return 0;
     }
-    
 }

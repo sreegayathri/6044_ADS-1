@@ -29,6 +29,5 @@ Starting audit...
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:118:11: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:121:11: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:124:11: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:129: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 31 errors.
+Checkstyle ends with 30 errors.
