@@ -2,11 +2,11 @@
  * Class for team.
  */
 class Team implements Comparable<Team> {
-    /**
+    /**.
      * { var_description }
      */
     String teamname;
-    /**
+    /**.
      * { item_description }
      */
     int wins, losses, draws;
