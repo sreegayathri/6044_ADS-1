@@ -13,15 +13,6 @@ Starting audit...
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:41: 'losses' hides a field. [HiddenField]
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:49: Parameter draws should be final. [FinalParameters]
 [ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:15:53: 'draws' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:66:29: Parameter teamname should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:66:36: 'teamname' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:74:25: Parameter wins should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:74:29: 'wins' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:82:27: Parameter losses should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:82:31: 'losses' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:90:26: Parameter draws should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:90:30: 'draws' hides a field. [HiddenField]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:101: First sentence should end with a period. [JavadocStyle]
-[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:108:26: Parameter that should be final. [FinalParameters]
+[ERROR] G:\ADS-1\6044_ADS-1\sample-assignment\m8\8.2 Team Ranking With Selection\Team.java:91:28: ';' is preceded with whitespace. [NoWhitespaceBefore]
 Audit done.
-Checkstyle ends with 24 errors.
+Checkstyle ends with 15 errors.
