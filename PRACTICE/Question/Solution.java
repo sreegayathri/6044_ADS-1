@@ -57,6 +57,7 @@ class Student implements Comparable<Student> {
         }
     }
 	public String toString() {
+		// String str
 		return this.id + "," + this.name + "," + this.degree + "," + this.percent;
 	}
 }
@@ -84,15 +85,16 @@ public class Solution{
 				// System.out.println(maxpq.delMax());
 				case "Recruit_Top_Candidate":
 				System.out.println(maxpq.delMax());
+				break;
 				case "Ranking":
 				// String[] token1 = tok[1].split(",");
 				// st = new Student(Integer.parseInt(token1[0]), token1[1], token1[2], Double.parseDouble(token1[2 + 1]));
 				// maxpq.insert(st);
 				// System.out.println((maxpq.pq.size()));
-
-				for (int x = n; x < maxpq.size(); x++) {
-					int j = 1;
-					System.out.println(j + ": " + maxpq.delMax());
+				System.out.println("\n");
+				for (int x = 0; x < maxpq.size(); x++) {
+					
+					System.out.println(x+1 + ": " + maxpq.delMax());
 				}
 				default:
 				break;
