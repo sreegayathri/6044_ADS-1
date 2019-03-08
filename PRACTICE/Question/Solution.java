@@ -50,8 +50,10 @@ class Student implements Comparable<Student> {
             return -1;
         } else if (this.getId() > that.getId()) {
             return -1;
-        } else {
+        } else if (this.getId() < that.getId()) {
             return 1;
+        } else {
+        	return 0;
         }
     }
 	public String toString() {
