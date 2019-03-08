@@ -83,9 +83,9 @@ public class Solution{
 				// maxpq.insert(st);
 				// System.out.println((maxpq.pq.size()));
 
-				for (int x = n; x < maxpq.size(); x++) {
-					int j = 1;
-					System.out.println(j + ": " + maxpq.delMax());
+				for (int x = 0; x < maxpq.size(); x++) {
+					
+					System.out.println(x + ": " + maxpq.delMax());
 				}
 				default:
 				break;
