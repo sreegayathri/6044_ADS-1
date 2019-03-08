@@ -13,23 +13,13 @@ Expected Output:
 7: 30003,Bharath,M.Tech,76.5
 
 Your Output: 
-10002,Hari,MS,86.4
-
-
+10003,Kumar,MS,92.4
+20001,Siva,ME,92.3
 1: 10001,Deepak,ME,92.3
-20004,Shiva,ME,86.4
-
-
+30001,Vamsi,M.Tech,98.0
+1: 20003,Vipul,MS,89.3
 1: 20002,Ramya,MS,88.6
-2: 20003,Vipul,MS,89.3
-30003,Bharath,M.Tech,76.5
-
-
 1: 30002,Lakshmi,ME,87.3
-2: 20001,Siva,ME,92.3
-
-
-1: 10003,Kumar,MS,92.4
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -54,30 +44,19 @@ Expected Output:
 14: 30003,Bharath,M.Tech,76.5
 
 Your Output: 
-10002,Hari,MS,86.4
-
-
-1: 10006,Manasa,ME,87.0
-2: 10005,Murthy,M.Tech,88.0
-3: 10004,Ramu,M.Tech,89.0
-20006,Murthy,M.Tech,84.0
-
-
-1: 20005,Ramu,M.Tech,85.0
-2: 20004,Shiva,ME,86.4
-3: 20003,Vipul,MS,89.3
-4: 10001,Kumar,ME,92.2
-30003,Bharath,M.Tech,76.5
-
-
+10003,Siva,MS,92.4
+1: 10001,Kumar,ME,92.2
+20002,Ramya,MS,98.6
+1: 20007,Manasa,ME,93.0
+1: 20001,Deepak,ME,92.3
+1: 20003,Vipul,MS,89.3
+1: 10004,Ramu,M.Tech,89.0
+30004,Akhil,ME,89.2
+1: 30001,Vamsi,M.Tech,89.0
+1: 10005,Murthy,M.Tech,88.0
 1: 30002,Lakshmi,ME,87.3
-2: 30001,Vamsi,M.Tech,89.0
-3: 30004,Akhil,ME,89.2
-4: 20001,Deepak,ME,92.3
-
-
-1: 10003,Siva,MS,92.4
-2: 20007,Manasa,ME,93.0
+1: 10006,Manasa,ME,87.0
+1: 10002,Hari,MS,86.4
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -103,54 +82,21 @@ Expected Output:
 
 Your Output: 
 10001,Kumar,ME,92.2
-
-
 10002,Hari,MS,86.4
-
-
 10003,Siva,MS,92.4
-
-
 10004,Ramu,M.Tech,89.0
-
-
 10005,Murthy,M.Tech,88.0
-
-
 10006,Manasa,ME,87.0
-
-
 20001,Deepak,ME,92.3
-
-
 20002,Ramya,MS,98.6
-
-
 20003,Vipul,MS,89.3
-
-
 20004,Shiva,ME,86.4
-
-
 20005,Ramu,M.Tech,85.0
-
-
 20006,Murthy,M.Tech,84.0
-
-
 20007,Manasa,ME,93.0
-
-
 30001,Vamsi,M.Tech,89.0
-
-
 30002,Lakshmi,ME,87.3
-
-
-30003,Bharath,M.Tech,76.5
-
-
-1: 30004,Akhil,ME,89.2
+30004,Akhil,ME,89.2
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -175,30 +121,19 @@ Expected Output:
 14: 30003,Bharath,M.Tech,76.5
 
 Your Output: 
-10006,Manasa,ME,95.0
-
-
-1: 10005,Murthy,M.Tech,96.0
-2: 10004,Ramu,M.Tech,97.0
-3: 10003,Siva,MS,97.4
-20006,Murthy,M.Tech,84.0
-
-
-1: 20005,Ramu,M.Tech,85.0
-2: 20004,Shiva,ME,86.4
-3: 20003,Vipul,MS,89.3
-4: 20001,Deepak,ME,92.3
-30003,Bharath,M.Tech,76.5
-
-
-1: 30002,Lakshmi,ME,87.3
-2: 30001,Vamsi,M.Tech,89.0
-3: 30004,Akhil,ME,89.2
-4: 20007,Manasa,ME,93.0
-
-
+10001,Kumar,ME,99.2
 1: 10002,Hari,MS,98.4
-2: 20002,Ramya,MS,98.6
+20002,Ramya,MS,98.6
+1: 10003,Siva,MS,97.4
+1: 10004,Ramu,M.Tech,97.0
+1: 10005,Murthy,M.Tech,96.0
+1: 10006,Manasa,ME,95.0
+20007,Manasa,ME,93.0
+1: 20001,Deepak,ME,92.3
+1: 20003,Vipul,MS,89.3
+1: 30004,Akhil,ME,89.2
+1: 30001,Vamsi,M.Tech,89.0
+1: 30002,Lakshmi,ME,87.3
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -219,30 +154,16 @@ Expected Output:
 7: 20006,Murthy,M.Tech,98.7
 
 Your Output: 
-10005,Murthy,M.Tech,98.7
-
-
-1: 10006,Manasa,ME,99.1
-2: 10002,Hari,MS,99.1
-3: 10003,Siva,MS,99.1
-20006,Murthy,M.Tech,98.7
-
-
-1: 20004,Shiva,ME,99.1
-2: 20003,Vipul,MS,99.1
-3: 20002,Ramya,MS,99.1
-4: 10004,Ramu,M.Tech,99.1
+10006,Manasa,ME,99.1
+20007,Manasa,ME,99.1
+1: 20005,Ramu,M.Tech,99.1
+1: 10004,Ramu,M.Tech,99.1
+1: 10002,Hari,MS,99.1
+20001,Deepak,ME,99.1
+1: 10003,Siva,MS,99.1
 10001,Kumar,ME,99.1
-
-
-1: 20001,Deepak,ME,99.1
-2: 20007,Manasa,ME,99.1
-20005,Ramu,M.Tech,99.1
-
-
-Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
-	at MaxPQ.delMax(MaxPQ.java:174)
-	at Solution.main(Solution.java:80)
+20004,Shiva,ME,99.1
+20003,Vipul,MS,99.1
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -267,37 +188,23 @@ Expected Output:
 7: 30003,Bharath,M.Tech,76.5
 
 Your Output: 
-30003,Bharath,M.Tech,76.5
-
-
-1: 20006,Murthy,M.Tech,84.0
-2: 20005,Ramu,M.Tech,85.0
-3: 20004,Shiva,ME,86.4
-4: 30002,Lakshmi,ME,87.3
-5: 30001,Vamsi,M.Tech,89.0
-6: 30004,Akhil,ME,89.2
-7: 20003,Vipul,MS,89.3
-8: 20001,Deepak,ME,92.3
-20007,Manasa,ME,93.0
-
-
-1: 10006,Manasa,ME,95.0
-2: 10005,Murthy,M.Tech,96.0
-3: 10004,Ramu,M.Tech,97.0
-4: 10003,Siva,MS,97.4
-10002,Hari,MS,98.4
-
-
-1: 20002,Ramya,MS,98.6
 10001,Kumar,ME,99.2
-
-
-Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
-	at MaxPQ.delMax(MaxPQ.java:174)
-	at Solution.main(Solution.java:80)
+1: 20002,Ramya,MS,98.6
+1: 10002,Hari,MS,98.4
+1: 10003,Siva,MS,97.4
+10004,Ramu,M.Tech,97.0
+1: 10005,Murthy,M.Tech,96.0
+10006,Manasa,ME,95.0
+20007,Manasa,ME,93.0
+20001,Deepak,ME,92.3
+20003,Vipul,MS,89.3
+30004,Akhil,ME,89.2
+30001,Vamsi,M.Tech,89.0
+30002,Lakshmi,ME,87.3
+20004,Shiva,ME,86.4
 ----------------------------------------
 
-########## Testcase 6: Failed ##########
+########## Testcase 6: Passed ##########
 Expected Output: 
 10001,Kumar,ME,99.2
 10002,Hari,MS,98.4
@@ -306,17 +213,10 @@ Expected Output:
 10005,Bharath,M.Tech,76.5
 
 Your Output: 
-10005,Bharath,M.Tech,76.5
-
-
-1: 10004,Ramu,M.Tech,97.0
-2: 10003,Siva,MS,97.4
+10001,Kumar,ME,99.2
 10002,Hari,MS,98.4
-
-
-1: 10001,Kumar,ME,99.2
-Exception in thread "main" java.util.NoSuchElementException: Priority queue underflow
-	at MaxPQ.delMax(MaxPQ.java:174)
-	at Solution.main(Solution.java:80)
+10003,Siva,MS,97.4
+10004,Ramu,M.Tech,97.0
+10005,Bharath,M.Tech,76.5
 ----------------------------------------
 
