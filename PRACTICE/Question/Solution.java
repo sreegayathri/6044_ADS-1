@@ -84,15 +84,16 @@ public class Solution{
 				break;
 				// System.out.println(maxpq.delMax());
 				case "Recruit_Top_Candidate":
-				System.out.println(maxpq.delMax());
-				break;
+					System.out.println(maxpq.delMax());
+					break;
 				case "Ranking":
 				// String[] token1 = tok[1].split(",");
 				// st = new Student(Integer.parseInt(token1[0]), token1[1], token1[2], Double.parseDouble(token1[2 + 1]));
 				// maxpq.insert(st);
 				// System.out.println((maxpq.pq.size()));
 				System.out.println();
-				for (int x = 0; x < maxpq.size(); x++) {
+				int a = maxpq.size();
+				for (int x = 0; x < a; x++) {
 					
 					System.out.println(x+1 + ": " + maxpq.delMax());
 				}
