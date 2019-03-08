@@ -224,7 +224,7 @@ Starting audit...
 [ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:65:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:68:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:68:33: Parameter args should be final. [FinalParameters]
-[ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:75:22: 'while' is not followed by whitespace. [WhitespaceAround]
+[ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:75:22: 'while' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:81: Line is longer than 80 characters (found 131). [LineLength]
 [ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:89: Line is longer than 80 characters (found 138). [LineLength]
 [ERROR] G:\ADS-1\6044_ADS-1\PRACTICE\Question\Solution.java:95: Line is longer than 80 characters (found 86). [LineLength]

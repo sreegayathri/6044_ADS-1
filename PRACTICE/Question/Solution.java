@@ -44,13 +44,13 @@ class Student implements Comparable<Student> {
 	}
 	public int compareTo(final Student that) {
 
-        if (this.getPercent() > that.getPercent()) {
+        if (this.percent > that.percent) {
             return 1;
-        } else if (this.getPercent() < that.getPercent()) {
+        } else if (this.percent < that.percent) {
             return -1;
-        } else if (this.getId() > that.getId()) {
+        } else if (this.id > that.id) {
             return -1;
-        } else if (this.getId() < that.getId()) {
+        } else if (this.id < that.id) {
             return 1;
         } else {
         	return 0;
