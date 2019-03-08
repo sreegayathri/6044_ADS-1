@@ -49,9 +49,9 @@ class Student implements Comparable<Student> {
         } else if (this.getPercent() < that.getPercent()) {
             return -1;
         } else if (this.getId() > that.getId()) {
-            return 1;
-        } else {
             return -1;
+        } else {
+            return 1;
         }
     }
 	public String toString() {

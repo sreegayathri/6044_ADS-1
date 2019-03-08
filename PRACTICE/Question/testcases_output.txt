@@ -14,8 +14,8 @@ Expected Output:
 
 Your Output: 
 10003,Kumar,MS,92.4
-20001,Siva,ME,92.3
-1: 10001,Deepak,ME,92.3
+10001,Deepak,ME,92.3
+1: 20001,Siva,ME,92.3
 30001,Vamsi,M.Tech,98.0
 1: 20003,Vipul,MS,89.3
 1: 20002,Ramya,MS,88.6
@@ -56,7 +56,7 @@ Your Output:
 1: 10005,Murthy,M.Tech,88.0
 1: 30002,Lakshmi,ME,87.3
 1: 10006,Manasa,ME,87.0
-1: 20004,Shiva,ME,86.4
+1: 10002,Hari,MS,86.4
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -154,16 +154,16 @@ Expected Output:
 7: 20006,Murthy,M.Tech,98.7
 
 Your Output: 
-10006,Manasa,ME,99.1
-20007,Manasa,ME,99.1
-1: 20005,Ramu,M.Tech,99.1
-1: 20004,Shiva,ME,99.1
-1: 20003,Vipul,MS,99.1
-20002,Ramya,MS,99.1
-1: 20001,Deepak,ME,99.1
-10004,Ramu,M.Tech,99.1
-10003,Siva,MS,99.1
+10001,Kumar,ME,99.1
 10002,Hari,MS,99.1
+1: 10003,Siva,MS,99.1
+1: 10004,Ramu,M.Tech,99.1
+1: 10006,Manasa,ME,99.1
+20001,Deepak,ME,99.1
+1: 20002,Ramya,MS,99.1
+20003,Vipul,MS,99.1
+20004,Shiva,ME,99.1
+20005,Ramu,M.Tech,99.1
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
