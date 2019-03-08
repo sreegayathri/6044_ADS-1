@@ -43,7 +43,7 @@ class Student implements Comparable<Student> {
 		this.percent = percent;
 	}
 	public int compareTo(final Student that) {
-        if (this.getPercent() > that.getPercent()) {
+        if (this.getPercent() < that.getPercent()) {
             return 1;
         } else {
             return -1;
@@ -83,11 +83,9 @@ public class Solution{
 				// st = new Student(Integer.parseInt(token1[0]), token1[1], token1[2], Double.parseDouble(token1[2 + 1]));
 				// maxpq.insert(st);
 				// System.out.println((maxpq.pq.size()));
-				// System.out.println("\n");
+				System.out.println("\n");
 				for (int x = 0; x < maxpq.size(); x++) {
-					
 					System.out.println((x+1) + ": " + maxpq.delMax());
-				
 				}
 				break;
 				default:
